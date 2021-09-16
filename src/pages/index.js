@@ -45,6 +45,7 @@ const IndexPage = () => {
             );
           })}
         </ul>
+        <span>Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatbsy</a></span>
       </footer>
     </div>
   )

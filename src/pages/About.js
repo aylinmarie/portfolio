@@ -1,5 +1,4 @@
 import * as React from "react";
- import * as stylesheet from "./Home.module.less";
 
 const About = () => {
 

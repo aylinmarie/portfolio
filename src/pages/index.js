@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as stylesheet from "./Home.module.less";
+import "./global.less";
 
 import About from './About.js';
 
@@ -25,12 +25,14 @@ const IndexPage = () => {
   ]
 
   return (
-      <React.Fragment>
+      <div className="root">
         <title>Aylin Marie - Portfolio</title>
-        <h1>Aylin Marie</h1>
-        <h2>UX engineer empowering teams with design systems</h2>
-        <p>Based in Atlanta and building at <a href="https://www.mailchimp.com" target="_blank">Mailchimp</a>. Formerly <a href="http://banyancom.com" target="_blank">Banyan</a>.</p>
-
+        <h1 className="h2">Aylin Marie</h1>
+        <section>
+          <h2 className="h1">UX engineer empowering teams with design systems</h2>
+          <p>Based in Atlanta and building at <a href="https://www.mailchimp.com" target="_blank">Mailchimp</a>. Formerly <a href="http://banyancom.com" target="_blank">Banyan</a>.</p>
+        </section>
+        
         <About/>
       <footer>
         <ul>
@@ -41,7 +43,7 @@ const IndexPage = () => {
           })}
         </ul>
       </footer>
-    </React.Fragment>
+    </div>
   )
 }
 

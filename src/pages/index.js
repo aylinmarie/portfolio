@@ -2,6 +2,8 @@ import * as React from "react";
 import "./global.less";
 
 import About from './About.js';
+import Work from './Work.js';
+
 
 const IndexPage = () => {
 
@@ -27,13 +29,14 @@ const IndexPage = () => {
   return (
       <div className="root">
         <title>Aylin Marie - Portfolio</title>
-        <h1 className="h2">Aylin Marie</h1>
+        <h1 className="h2"><a href="/">Aylin Marie</a></h1>
         <section>
-          <h2 className="h1">UX engineer empowering teams with design systems</h2>
+          <h2 className="h1">front end engineer empowering teams with thoughtful design systems while specializing in accessibility</h2>
           <p>Based in Atlanta and building at <a href="https://www.mailchimp.com" target="_blank">Mailchimp</a>. Formerly <a href="http://banyancom.com" target="_blank">Banyan</a>.</p>
         </section>
         
         <About/>
+        <Work/>
       <footer>
         <ul>
           {LINKS.map(link => {

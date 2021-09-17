@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./global.less";
+import { Helmet } from "react-helmet"
 
 import About from './About.js';
 import Work from './Work.js';
@@ -13,8 +14,8 @@ const IndexPage = () => {
       url: "mailto:aylin.mcginnis@gmail.com"
     },
     {
-      name: "CodePen",
-      url: "https://codepen.io/aylinmarie"
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/aylinmcginnis/"
     },
     {
       name: "Twitter",
@@ -24,11 +25,20 @@ const IndexPage = () => {
       name: "Instagram",
       url: "https://www.instagram.com/aylinmcg"
     },
+    {
+      name: "CodePen",
+      url: "https://codepen.io/aylinmarie"
+    }
   ]
 
   return (
-      <div className="root">
-        <title>Aylin Marie - Portfolio</title>
+    <>
+      <Helmet htmlAttributes={{
+        lang: 'en',
+      }}>
+          <title>Aylin Marie - Portfolio</title>
+      </Helmet>
+      <main className="root">
         <h1 className="h2"><a href="/">Aylin Marie</a></h1>
         <section>
           <h2 className="h1">front end engineer empowering teams with thoughtful design systems while specializing in accessibility</h2>
@@ -37,17 +47,18 @@ const IndexPage = () => {
         
         <About/>
         <Work/>
-      <footer>
-        <ul>
-          {LINKS.map(link => {
-            return (
-              <li key={link.name}><a href={link.url}>{link.name}</a></li>
-            );
-          })}
-        </ul>
-        <span>Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatbsy</a></span>
-      </footer>
-    </div>
+    </main>
+    <footer>
+    <ul>
+      {LINKS.map(link => {
+        return (
+          <li key={link.name}><a href={link.url}>{link.name}</a></li>
+        );
+      })}
+    </ul>
+    <span>Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatbsy</a></span>
+  </footer>
+  </>
   )
 }
 

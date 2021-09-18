@@ -12,14 +12,6 @@ const About = () => {
         <p>As I started developing more knowledge in my craft, I found a role that combined my love for both design and engineering. I now work on building a design system for Mailchimp as a UX Engineer.</p>
 
         <p>If I'm not digging into code or pairing fonts, you can probably find me on the other side of the hemisphere :)</p>
-
-        <h3>what else?</h3>
-        <ul>
-          <li>Founder of OneYoungTraveler LLC </li>
-          <li>General Assembly Workshop Instructor</li>
-          <li>Squarespace Circle Member Feature</li>
-          <li>Squarespace Portfolio Consultant - 2017 A3C Creator Complex Conference</li>
-          </ul>
       </section>
   )
 }

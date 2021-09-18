@@ -8,12 +8,19 @@
 @sand: #CCAFA4;
 @graphite: #242723;
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     margin: 0;
     background-color: @stone;
     color: @graphite;
     font-family: mulish, san-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    vertical-align: baseline;
+    word-break: break-word;
 }
 
 a {
@@ -41,26 +48,27 @@ h3,
 
 h1, .h1 {
     font-weight: 400;
-    font-size: 64px;
+    font-size: 4.8rem;
     line-height: 1.2;
     padding-bottom: 2rem;
 }
 
 h2, .h2 {
     font-weight: 300;
-    font-size: 38px;
+    font-size: 3.2rem;
     line-height: 1.4;
     padding-bottom: 1rem;
 }
 
 h3, .h3 {
     font-weight: 300;
-    font-size: 28px;
+    font-size: 2.4rem;
     padding-bottom: .5rem;
 }
 
 section {
-    padding: 3rem;
+    padding: 2rem;
+    margin: 4rem 0;
 
     &:not(:nth-of-type(odd)) {
         border: 1px solid @sand;
@@ -73,12 +81,14 @@ footer {
     padding: 1rem;
     border-top: 1px solid @sand;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
     ul {
         list-style-type: none;
         display: flex;
+        flex-wrap: wrap;
         padding: 0;
 
         li {
@@ -94,6 +104,13 @@ footer {
 }
 
 .grid {
+    --auto-grid-min-size: 16rem;
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 25% 1fr;
+    grid-gap: 1rem;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
 }

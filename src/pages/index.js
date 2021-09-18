@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 
 import About from './About.js';
 import Work from './Work.js';
-
+import Projects from './Projects.js';
 
 const IndexPage = () => {
 
@@ -47,6 +47,7 @@ const IndexPage = () => {
         
         <About/>
         <Work/>
+        <Projects/>
     </main>
     <footer>
     <ul>

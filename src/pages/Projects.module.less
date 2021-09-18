@@ -1,0 +1,21 @@
+@import "../../global.less";
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @base-unit * 4;
+
+    a {
+        @media (prefers-reduced-motion: no-preference) {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    img {
+        object-fit: cover;
+    }
+}

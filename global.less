@@ -22,6 +22,11 @@ body {
     line-height: 1.5;
     vertical-align: baseline;
     word-break: break-word;
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
 }
 
 a {
@@ -84,7 +89,7 @@ section {
     margin: 0 3rem;
 
     &:first-of-type {
-        margin-top: 9rem;
+        margin-top: 30rem;
         margin-bottom: 9rem;
     }
 }
@@ -114,6 +119,10 @@ footer {
     padding: 2rem;
 }
 
+.title {
+    font-size: 6.4rem;
+}
+
 .grid {
     --auto-grid-min-size: 16rem;
     display: grid;
@@ -134,3 +143,9 @@ footer {
     margin: 0 3rem;
     transform: translateY(-1rem);
 }
+
+
+@keyframes fadeIn { 
+	0% {opacity: 0;} 
+	100% {opacity: 1;} 
+} 

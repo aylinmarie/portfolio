@@ -39,8 +39,8 @@ const IndexPage = () => {
           <title>Aylin Marie - Portfolio</title>
       </Helmet>
       <main className="root">
-        <h1 className="h2"><a href="/">Aylin Marie</a></h1>
         <section>
+          <h1 className="title"><a href="/">Aylin Marie</a></h1>
           <h2 className="h1">front end engineer empowering teams with thoughtful design systems while specializing in accessibility</h2>
           <p>Based in Atlanta and building at <a href="https://www.mailchimp.com" target="_blank">Mailchimp</a>. Formerly <a href="http://banyancom.com" target="_blank">Banyan</a>.</p>
         </section>

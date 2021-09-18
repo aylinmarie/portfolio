@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./global.less";
+import "../../global.less";
 import { Helmet } from "react-helmet"
 
 import About from './About.js';
@@ -56,7 +56,7 @@ const IndexPage = () => {
         );
       })}
     </ul>
-    <span>Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatbsy</a></span>
+    <span>Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a></span>
   </footer>
   </>
   )

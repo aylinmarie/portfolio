@@ -10,8 +10,8 @@ const IndexPage = () => {
 
   const LINKS = [
     {
-      name: "Email",
-      url: "mailto:aylin.mcginnis@gmail.com"
+      name: "hello@aylinmarie.co",
+      url: "mailto:hello@aylinmarie.co"
     },
     {
       name: "LinkedIn",

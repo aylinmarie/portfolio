@@ -7,7 +7,7 @@ const Projects = () => {
   return (
       <section className="grid">
         <div>
-          <h2>Projects</h2>
+          <h2 className="line">Projects</h2>
         </div>
         <div className={stylesheet.gallery}>
             <a href="https://aylin-marie.netlify.app/" target="_blank">

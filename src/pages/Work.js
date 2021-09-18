@@ -7,7 +7,7 @@ const Work = () => {
   return (
       <section className="grid">
         <div>
-          <h2>Work</h2>
+          <h2 className="line">Work</h2>
         </div>
         <div>
           <div className={stylesheet.workItem}>

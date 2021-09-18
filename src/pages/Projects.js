@@ -10,7 +10,7 @@ const Projects = () => {
           <h2 className="line">Projects</h2>
         </div>
         <div className={stylesheet.gallery}>
-            <a href="https://aylin-marie.netlify.app/" target="_blank">
+            <a href="https://aylin-project-portfolio.netlify.app/" target="_blank">
                 <StaticImage 
                     src="../images/sample_portfolio.png" 
                     width={300} 

@@ -32,7 +32,7 @@ const Projects = () => {
   return (
       <section className="grid">
         <div>
-          <h2 className="line">Projects</h2>
+          <h2 className="h2Line">Projects</h2> <span className="line"/>
         </div>
         <div className={stylesheet.gallery}>
           {PROJECT_ITEMS.map(item => {

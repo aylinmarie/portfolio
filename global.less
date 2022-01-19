@@ -29,6 +29,10 @@ body {
     }
 }
 
+p {
+    max-width: 70ch;
+}
+
 a {
     color: @clay;
 
@@ -84,9 +88,10 @@ h3, .h3 {
 }
 
 section {
+    max-width: 1200px;
+    margin: auto;
     padding-bottom: 9rem;
     padding-top: 3rem;
-    margin: 0 3rem;
 
     &:first-of-type {
         margin-top: 30rem;
@@ -102,7 +107,7 @@ section {
 footer {
     max-width: 1300px;
     margin: auto;
-    padding: 1rem;
+    padding: @base-unit * 6;
     border-top: 1px solid @sand;
     display: flex;
     flex-wrap: wrap;
@@ -121,7 +126,7 @@ footer {
 .root {
     max-width: 1300px;
     margin: auto;
-    padding: 2rem;
+    padding: @base-unit * 6;
 }
 
 .title {
@@ -139,12 +144,15 @@ footer {
     }
 }
 
-.line::after {
+.h2Line {
+    display: inline;
+    margin-right: @base-unit * 4;
+}
+
+.line {
     display: inline-block;
-    content: "";
     border-top: .1rem solid @graphite;
     width: 10rem;
-    margin: 0 3rem;
     transform: translateY(-1rem);
 }
 

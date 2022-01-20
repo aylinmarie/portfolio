@@ -1,10 +1,13 @@
 import * as React from "react";
 import "../../global.less";
 import { Helmet } from "react-helmet"
-
+import ReactGA from 'react-ga';
 import About from './About.js';
 import Work from './Work.js';
 import Projects from './Projects.js';
+
+ReactGA.initialize('UA-66263407-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const IndexPage = () => {
 

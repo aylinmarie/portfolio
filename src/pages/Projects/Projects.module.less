@@ -1,9 +1,9 @@
-@import "../../global.less";
+@import "../../../global.less";
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: @base-unit * 4;
+    gap: calc(var(--base-unit) * 4);
 
     a {
         @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +16,7 @@
     }
 
     img {
-        border: 1px solid @clay;
+        border: 1px solid var(--clay);
         object-fit: cover;
         object-position: 0 0;
     }

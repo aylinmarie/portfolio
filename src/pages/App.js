@@ -2,8 +2,8 @@ import * as React from "react";
 import "../../global.less";
 
 import About from "./About.js";
-import Work from "./Work.js";
-import Projects from "./Projects.js";
+import Work from "./Work/Work.js";
+import Projects from "./Projects/Projects.js";
 
 const App = () => {
   const LINKS = [

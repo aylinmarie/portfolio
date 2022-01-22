@@ -3,10 +3,10 @@ import * as stylesheet from "./Projects.module.less";
 
 import { Link } from "react-router-dom";
 
-import baImg from "../images/black_artisans.png";
-import portfolioImg from "../images/sample_portfolio.png";
-import knitImg from "../images/elegant_knit.png";
-import dataVizImg from "../images/dataViz.png";
+import baImg from "../../images/black_artisans.png";
+import portfolioImg from "../../images/sample_portfolio.png";
+import knitImg from "../../images/elegant_knit.png";
+import dataVizImg from "../../images/dataViz.png";
 
 const Projects = () => {
   const PROJECT_ITEMS = [

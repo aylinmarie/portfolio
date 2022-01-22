@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "../../util/SrollToTop";
 import App from "./App.js";
 import DataViz from "./Mailchimp/DataViz";
 
@@ -13,6 +14,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const IndexPage = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Helmet
         htmlAttributes={{
           lang: "en",

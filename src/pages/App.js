@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../../global.less";
+import * as stylesheet from "./App.module.less";
 
 import About from "./About.js";
 import Work from "./Work/Work.js";
@@ -31,8 +32,8 @@ const App = () => {
 
   return (
     <>
-      <main className="root">
-        <section>
+      <main className={stylesheet.root}>
+        <section className={stylesheet.intro}>
           <h1 className="title">
             <a href="/">Aylin Marie</a>
           </h1>

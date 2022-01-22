@@ -1,11 +1,14 @@
 import * as React from "react";
-import * as stylesheet from './Badge.module.less'
+import PropTypes from "prop-types";
 
-const Badge = ({children}) => {
+import * as stylesheet from "./Badge.module.less";
 
-  return (
-      <span className={stylesheet.root}>{children}</span>
-  )
-}
+const Badge = ({ children }) => {
+  return <span className={stylesheet.root}>{children}</span>;
+};
 
-export default Badge
+Badge.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Badge;

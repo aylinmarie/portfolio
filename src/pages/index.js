@@ -22,10 +22,6 @@ const IndexPage = () => {
       >
         <title>Aylin Marie - Portfolio</title>
       </Helmet>
-      {/* <nav>
-        <Link to="/">Home</Link>
-        <Link to="/mailchimp-data-viz">Mailchimp Data Visualization</Link>
-      </nav> */}
       <Routes>
         <Route path="/" element={<App />}>
           Home

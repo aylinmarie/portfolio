@@ -1,10 +1,12 @@
 import * as React from "react";
 import * as stylesheet from "./Projects.module.less";
 
+import { Link } from "react-router-dom";
+
 import baImg from '../images/black_artisans.png';
 import portfolioImg from'../images/sample_portfolio.png';
 import knitImg from'../images/elegant_knit.png';
-
+import dataVizImg from'../images/dataViz.png';
 
 const Projects = () => {
 
@@ -13,19 +15,29 @@ const Projects = () => {
       name: 'Black Artisans',
       link: 'https://blackartisans.netlify.app/',
       img: baImg,
-      description: 'Project titled Black Artisans featuring black craftspeople around the world.'
+      description: 'Project titled Black Artisans featuring black craftspeople around the world.',
+      external: true
     },
     {
       name: 'Elegant Knit',
       link: 'https://www.elegantknit.co',
       img: knitImg,
-      description: 'Project titled Elegant knits sharing my favorite modern knitting patterns.'
+      description: 'Project titled Elegant knits sharing my favorite modern knitting patterns.',
+      external: true
     },
     {
       name: 'Sample Portfolio',
       link: 'https://aylin-project-portfolio.netlify.app/',
       img: portfolioImg,
-      description: 'Early iteration of my portfolio website built in Gatsby and designed in Figma.'
+      description: 'Early iteration of my portfolio website built in Gatsby and designed in Figma.',
+      external: true
+    },
+    {
+      name: 'Mailchimp Data Visualization',
+      link: '/mailchimp-data-viz',
+      img: dataVizImg,
+      description: "Refresh of Mailchimp's data visualization.",
+      external: false
     }
   ]
 
@@ -36,14 +48,22 @@ const Projects = () => {
         </div>
         <div className={stylesheet.gallery}>
           {PROJECT_ITEMS.map(item => {
-            return (
-              <a key={item.name} href={item.link} target="_blank">
-                <img 
-                    src={item.img} 
-                    width={300} 
-                    height={300} 
-                    alt={item.description} />
-            </a>
+            return item.external ? (
+                <a key={item.name} href={item.link} target="_blank">
+                  <img 
+                      src={item.img} 
+                      width={300} 
+                      height={300} 
+                      alt={item.description} />
+              </a>
+            ):(
+              <Link key={item.name} to={item.link} >
+                  <img 
+                      src={item.img} 
+                      width={300} 
+                      height={300} 
+                      alt={item.description} />
+              </Link>
             )
           })}
         </div>

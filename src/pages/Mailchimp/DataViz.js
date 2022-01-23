@@ -1,5 +1,4 @@
 import * as React from "react";
-import Nav from "../../components/Layout/Nav";
 import colorCombo from "../../images/colorCombo.png";
 import dataViz from "../../images/dataviz.png";
 
@@ -8,7 +7,6 @@ import Layout from "../../components/Layout";
 const DataViz = () => {
   return (
     <Layout>
-      <Nav />
       <section className="grid">
         <div>
           <h1 className="h2 h2Line">Mailchimp Data Visualization</h1>{" "}

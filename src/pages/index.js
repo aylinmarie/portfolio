@@ -17,20 +17,22 @@ try {
 }
 
 ReactGA.initialize("UA-66263407-1");
-ReactGA.pageview(_window.location.pathname + _window.location.search);
+_window &&
+  ReactGA.pageview(_window.location.pathname + _window.location.search);
 
 const IndexPage = () => {
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    _window.addEventListener("scroll", () => {
-      if (_window.pageYOffset > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
+    _window &&
+      _window.addEventListener("scroll", () => {
+        if (_window.pageYOffset > 300) {
+          setShowButton(true);
+        } else {
+          setShowButton(false);
+        }
+      });
   }, []);
 
   return (

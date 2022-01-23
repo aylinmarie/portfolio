@@ -3,8 +3,8 @@ import "../../global.less";
 import * as stylesheet from "./App.module.less";
 
 import About from "./About.js";
-import Work from "./work/index.js";
-import Projects from "./project/index.js";
+import Work from "./Work/index.js";
+import Projects from "./Project/index.js";
 
 const App = () => {
   return (

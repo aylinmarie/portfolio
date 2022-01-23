@@ -1,6 +1,6 @@
 import * as React from "react";
 import Badge from "../../components/Badge";
-import * as stylesheet from "./work.module.less";
+import * as stylesheet from "./Work.module.less";
 
 const Work = () => {
   return (

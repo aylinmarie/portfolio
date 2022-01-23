@@ -1,12 +1,13 @@
 import * as React from "react";
-import Footer from "../../components/Footer";
-import Nav from "../../components/Nav";
+import Nav from "../../components/Layout/Nav";
 import colorCombo from "../../images/colorCombo.png";
 import dataViz from "../../images/dataviz.png";
 
+import Layout from "../../components/Layout";
+
 const DataViz = () => {
   return (
-    <>
+    <Layout>
       <Nav />
       <section className="grid">
         <div>
@@ -102,8 +103,7 @@ const DataViz = () => {
           </section>
         </div>
       </section>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

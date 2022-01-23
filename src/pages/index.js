@@ -5,7 +5,7 @@ import ReactGA from "react-ga";
 
 import favicon from "../images/favicon.ico";
 import App from "./App.js";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 ReactGA.initialize("UA-66263407-1");
 try {
@@ -25,10 +25,9 @@ const IndexPage = () => {
         <link rel="icon" href={favicon} />
         <title>Aylin Marie - Portfolio</title>
       </Helmet>
-      <main className="root">
+      <Layout>
         <App />
-      </main>
-      <Footer />
+      </Layout>
     </>
   );
 };

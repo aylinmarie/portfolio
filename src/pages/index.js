@@ -2,19 +2,38 @@ import * as React from "react";
 import "../../global.less";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import ScrollToTop from "../../util/SrollToTop";
 import App from "./App.js";
-import DataViz from "./Mailchimp/DataViz";
 
 ReactGA.initialize("UA-66263407-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const IndexPage = () => {
+  const LINKS = [
+    {
+      name: "hello@aylinmarie.co",
+      url: "mailto:hello@aylinmarie.co",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/aylinmcginnis/",
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/aylin_marie",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/aylinmcg",
+    },
+    {
+      name: "CodePen",
+      url: "https://codepen.io/aylinmarie",
+    },
+  ];
+
   return (
-    <BrowserRouter>
-      <ScrollToTop />
+    <>
       <Helmet
         htmlAttributes={{
           lang: "en",
@@ -22,15 +41,27 @@ const IndexPage = () => {
       >
         <title>Aylin Marie - Portfolio</title>
       </Helmet>
-      <Routes>
-        <Route path="/" element={<App />}>
-          Home
-        </Route>
-        <Route path="/mailchimp-data-viz" element={<DataViz />}>
-          Home
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <main className="root">
+        <App />
+      </main>
+      <footer>
+        <ul>
+          {LINKS.map((link) => {
+            return (
+              <li key={link.name}>
+                <a href={link.url}>{link.name}</a>
+              </li>
+            );
+          })}
+        </ul>
+        <span>
+          Built with{" "}
+          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
+            Gatsby
+          </a>
+        </span>
+      </footer>
+    </>
   );
 };
 

@@ -1,15 +1,15 @@
 import * as React from "react";
-import Nav from "../../components/Nav/";
+import Nav from "../../components/Nav";
+import colorCombo from "../../images/colorCombo.png";
+import dataViz from "../../images/dataviz.png";
 
-import colorCombo from "./images/colorCombo.png";
-
-const About = () => {
+const DataViz = () => {
   return (
     <>
       <Nav />
       <section className="grid">
         <div>
-          <h2 className="h2Line">Mailchimp Data Visualization</h2>{" "}
+          <h1 className="h2 h2Line">Mailchimp Data Visualization</h1>{" "}
           <span className="line" />
         </div>
         <div>
@@ -17,9 +17,75 @@ const About = () => {
             <p>
               One of my first projects at Mailchimp was to help redefine our
               visual guidelines for how we present data. I worked with our
-              design system Product Designer and infrastructure Staff Engineer
-              to reevaluate color combinations for accessibility and refactoring
-              foundational charts from Dojo to React D3.
+              design system Product Designer and infrastructure Staff Engineer.
+            </p>
+            <p>For this deliverable, our goals were to:</p>
+            <ol>
+              <li>
+                Provide a number of color combinations with appropriate color
+                contrast (in both Figma and code).
+              </li>
+              <li>
+                Publish first phase of our refactored charts from Dojo to{" "}
+                <a
+                  href="https://react-d3-library.github.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  React D3
+                </a>
+                .
+              </li>
+            </ol>
+          </div>
+          <section>
+            <h2 className="h3">Defining Color Combinations</h2>
+            <img
+              alt="Six combinations of colors for proper visual contrast used in Mailchimp charts."
+              src={colorCombo}
+            />
+            <p>
+              We did not have design guidelines on using color within our
+              charts. Color combination decisions were typically left up to
+              product teams. With our large selection of brand colors, this
+              introduced potential issues that could make our visualizations
+              inaccessible to users with color blindness or low-vision.
+            </p>
+
+            <p>
+              At the time of the project, we still had various way to implement
+              charts in the codebase so we made the color combinations
+              accessible through 1) Less tokens and 2) class names. Our tokens
+              were combination names set up as an array of values. We then took
+              those tokens and created a{" "}
+              <a
+                href="https://lesscss.org/features/#mixins-feature-loops-feature"
+                target="_blank"
+                rel="noreferrer"
+              >
+                recursive mixin
+              </a>{" "}
+              to generate the CSS class names.
+            </p>
+          </section>
+          <section>
+            <h2 className="h3">Refactoring to React D3</h2>
+            <img
+              alt="Line charts using new color combination palettes."
+              src={dataViz}
+            />
+            <p>
+              Our charting system was originally built in Dojo mixed with
+              various charting libraries. This project was the first phase of
+              refactoring charts from Dojo to{" "}
+              <a
+                href="https://react-d3-library.github.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                React D3
+              </a>
+              .
             </p>
 
             <p>
@@ -32,38 +98,11 @@ const About = () => {
               </a>
               .
             </p>
-          </div>
-          <section>
-            <h3>Defining Color Combinations</h3>
-            <p>
-              We did not have design guidelines on how to use colors within our
-              charts. Color combination decisions were typically left up to the
-              product team. With the large selection of colors in our brand
-              palette, this introduced issues that would easily make our
-              visualizations inaccessible to users with color blindness or
-              low-vision.
-            </p>
-            <p>For this deliverable, our goals were to:</p>
-            <ul>
-              <li>
-                Provide a number of color combinations with appropriate color
-                contrast.
-              </li>
-              <li>
-                Make the combination of colors constrained in code using css
-                variables.
-              </li>
-            </ul>
-
-            <img src={colorCombo} />
           </section>
-          <div>
-            <h3>Refactoring to React D3</h3>
-          </div>
         </div>
       </section>
     </>
   );
 };
 
-export default About;
+export default DataViz;

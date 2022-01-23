@@ -3,10 +3,10 @@ import * as stylesheet from "./Projects.module.less";
 
 import { Link } from "gatsby";
 
-import baImg from "../../images/black_artisans.png";
-import portfolioImg from "../../images/sample_portfolio.png";
-import knitImg from "../../images/elegant_knit.png";
-import dataVizImg from "../../images/dataviz.png";
+import baImg from "../images/black_artisans.png";
+import portfolioImg from "../images/sample_portfolio.png";
+import knitImg from "../images/elegant_knit.png";
+import dataVizImg from "../images/dataviz.png";
 
 const Projects = () => {
   const PROJECT_ITEMS = [
@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       name: "Mailchimp Data Visualization",
-      link: "/mailchimp/dataviz",
+      link: "/Mailchimp/Dataviz",
       img: dataVizImg,
       description: "Refresh of Mailchimp's data visualization.",
       external: false,

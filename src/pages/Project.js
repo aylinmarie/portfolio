@@ -3,6 +3,8 @@ import * as stylesheet from "./Projects.module.less";
 
 import { Link } from "gatsby";
 
+import ExternalLink from "../components/ExternalLink";
+
 import baImg from "../images/black_artisans.png";
 import portfolioImg from "../images/sample_portfolio.png";
 import knitImg from "../images/elegant_knit.png";
@@ -51,19 +53,14 @@ const Projects = () => {
       <div className={stylesheet.gallery}>
         {PROJECT_ITEMS.map((item) => {
           return item.external ? (
-            <a
-              key={item.name}
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <ExternalLink key={item.name} href={item.link}>
               <img
                 src={item.img}
                 width={300}
                 height={300}
                 alt={item.description}
               />
-            </a>
+            </ExternalLink>
           ) : (
             <Link key={item.name} to={item.link}>
               <img

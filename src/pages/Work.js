@@ -2,6 +2,8 @@ import * as React from "react";
 import Badge from "../components/Badge";
 import * as stylesheet from "./Work.module.less";
 
+import ExternalLink from "../components/ExternalLink";
+
 const Work = () => {
   return (
     <section className="grid">
@@ -44,31 +46,19 @@ const Work = () => {
             for a number of clients. As an independent front end developer, I
             was also a Squarespace Circle Member growing my web design practice.
             I was featured on a{" "}
-            <a
-              href="https://circle.squarespace.com/member-stories/aylin-marie"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <ExternalLink href="https://circle.squarespace.com/member-stories/aylin-marie">
               Squarespace member story
-            </a>{" "}
+            </ExternalLink>{" "}
             sharing my journey from accounting to finding my craft in the tech
             space. I've worked with them as a 2017 Portfolio Consultant during
             the{" "}
-            <a
-              href="https://www.a3cfestival.com/conference"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <ExternalLink href="https://www.a3cfestival.com/conference">
               A3C Conference
-            </a>{" "}
+            </ExternalLink>{" "}
             and hosted{" "}
-            <a
-              href="https://generalassemb.ly/instructors/aylin-mcginnis/15542"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <ExternalLink href="https://generalassemb.ly/instructors/aylin-mcginnis/15542">
               Squarespace courses at General Assembly
-            </a>
+            </ExternalLink>
             .
           </p>
         </div>

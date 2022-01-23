@@ -17,11 +17,7 @@ try {
 const IndexPage = () => {
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          lang: "en",
-        }}
-      >
+      <Helmet>
         <link rel="icon" href={favicon} />
         <title>Aylin Marie - Portfolio</title>
       </Helmet>

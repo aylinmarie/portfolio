@@ -2,6 +2,8 @@ import * as React from "react";
 import "../../global.less";
 import * as stylesheet from "./App.module.less";
 
+import ExternalLink from "../components/ExternalLink";
+
 import About from "./About.js";
 import Work from "./Work.js";
 import Projects from "./Project.js";
@@ -19,14 +21,11 @@ const App = () => {
         </h2>
         <p>
           Based in Atlanta and building at{" "}
-          <a href="https://www.mailchimp.com" target="_blank" rel="noreferrer">
+          <ExternalLink href="https://www.mailchimp.com">
             Mailchimp
-          </a>
+          </ExternalLink>
           . Formerly{" "}
-          <a href="http://banyancom.com" target="_blank" rel="noreferrer">
-            Banyan
-          </a>
-          .
+          <ExternalLink href="http://banyancom.com">Banyan</ExternalLink>.
         </p>
       </section>
 

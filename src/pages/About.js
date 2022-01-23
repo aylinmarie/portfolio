@@ -1,4 +1,5 @@
 import * as React from "react";
+import ExternalLink from "../components/ExternalLink";
 
 const About = () => {
   return (
@@ -11,17 +12,17 @@ const About = () => {
           In 2017, I felt it was time to shift gears and start figuring out what
           it means to “love what you do”. I quit my job (after a year of
           self-teaching) and jumped into an immersive web development program at{" "}
-          <a href="https://generalassemb.ly/" target="_blank" rel="noreferrer">
+          <ExternalLink href="https://generalassemb.ly/">
             General Assembly
-          </a>
+          </ExternalLink>
           .
         </p>
 
         <p>
           I landed my first role as a front end developer for a{" "}
-          <a href="http://banyancom.com/</p>" target="_blank" rel="noreferrer">
+          <ExternalLink href="http://banyancom.com/">
             creative agency
-          </a>{" "}
+          </ExternalLink>{" "}
           that focuses on social good companies in Atlanta. On the side, I use
           to work with entrepreneurs to help launch their digital presence on
           different platforms. There is nothing more exciting than watching

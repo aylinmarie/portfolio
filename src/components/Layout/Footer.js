@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import ExternalLink from "../ExternalLink";
+
 export default function Footer() {
   const LINKS = [
     {
@@ -33,18 +35,14 @@ export default function Footer() {
         {LINKS.map((link) => {
           return (
             <li key={link.name}>
-              <a href={link.url} target="_blank" rel="noreferrer">
-                {link.name}
-              </a>
+              <ExternalLink href={link.url}>{link.name}</ExternalLink>
             </li>
           );
         })}
       </ul>
       <span>
         Built with{" "}
-        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
-          Gatsby
-        </a>
+        <ExternalLink href="https://www.gatsbyjs.com/">Gatsby</ExternalLink>
       </span>
     </footer>
   );

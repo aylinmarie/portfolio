@@ -2,6 +2,8 @@ import * as React from "react";
 import colorCombo from "../../images/colorCombo.png";
 import dataViz from "../../images/dataviz.png";
 
+import ExternalLink from "../../components/ExternalLink";
+
 import Layout from "../../components/Layout";
 
 const DataViz = () => {
@@ -27,13 +29,9 @@ const DataViz = () => {
               </li>
               <li>
                 Publish first phase of our refactored charts from Dojo to{" "}
-                <a
-                  href="https://react-d3-library.github.io/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <ExternalLink href="https://react-d3-library.github.io/">
                   React D3
-                </a>
+                </ExternalLink>
                 .
               </li>
             </ol>
@@ -58,13 +56,9 @@ const DataViz = () => {
               accessible through 1) Less tokens and 2) class names. Our tokens
               were combination names set up as an array of values. We then took
               those tokens and created a{" "}
-              <a
-                href="https://lesscss.org/features/#mixins-feature-loops-feature"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <ExternalLink href="https://lesscss.org/features/#mixins-feature-loops-feature">
                 recursive mixin
-              </a>{" "}
+              </ExternalLink>{" "}
               to generate the CSS class names.
             </p>
           </section>
@@ -78,24 +72,16 @@ const DataViz = () => {
               Our charting system was originally built in Dojo mixed with
               various charting libraries. This project was the first phase of
               refactoring charts from Dojo to{" "}
-              <a
-                href="https://react-d3-library.github.io/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <ExternalLink href="https://react-d3-library.github.io/">
                 React D3
-              </a>
+              </ExternalLink>
               .
             </p>
 
             <p>
-              <a
-                href="https://ux.mailchimp.com/product/patterns/data"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <ExternalLink href="https://ux.mailchimp.com/product/patterns/data">
                 Mailchimp's data visualization guidelines
-              </a>
+              </ExternalLink>
               .
             </p>
           </section>

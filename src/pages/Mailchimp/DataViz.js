@@ -1,4 +1,5 @@
 import * as React from "react";
+import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import colorCombo from "../../images/colorCombo.png";
 import dataViz from "../../images/dataviz.png";
@@ -101,6 +102,7 @@ const DataViz = () => {
           </section>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

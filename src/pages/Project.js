@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       name: "Mailchimp Data Visualization",
-      link: "/Mailchimp/DataViz",
+      link: "/mailchimp/data-viz",
       img: dataVizImg,
       description: "Refresh of Mailchimp's data visualization.",
       external: false,

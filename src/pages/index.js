@@ -3,6 +3,7 @@ import "../../global.less";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 
+import favicon from "../images/favicon.ico";
 import App from "./App.js";
 import Footer from "../components/Footer";
 
@@ -21,6 +22,7 @@ const IndexPage = () => {
           lang: "en",
         }}
       >
+        <link rel="icon" href={favicon} />
         <title>Aylin Marie - Portfolio</title>
       </Helmet>
       <main className="root">

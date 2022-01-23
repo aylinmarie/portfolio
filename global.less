@@ -21,7 +21,7 @@ body {
     color: var(--graphite);
     font-family: mulish, san-serif;
     font-size: 1.6rem;
-    line-height: 1.5;
+    line-height: 1.6;
     vertical-align: baseline;
     word-break: break-word;
 
@@ -37,6 +37,7 @@ p {
 
 a {
     color: var(--clay);
+    text-decoration: none;
 
     &:hover, 
     &:focus {
@@ -46,7 +47,17 @@ a {
     }
 
     @media (prefers-reduced-motion: no-preference) {
-        transition: color 0.2s ease;
+        transition: 0.2s ease;
+    }
+}
+
+p a, span a, nav a, li a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+
+    &:hover, 
+    &:focus {
+        padding-bottom: 0;
     }
 }
 
@@ -81,10 +92,6 @@ h3,
     font-family: ivypresto-display;
     letter-spacing: 0;
     margin: 0;
-
-    a {
-        text-decoration: none;
-    }
 }
 
 h1, .h1 {
@@ -114,10 +121,6 @@ h4, .h4 {
     padding-bottom: .5rem;
     letter-spacing: 0;
     margin: 0;
-
-    a {
-        text-decoration: none;
-    }
 }
 
 section {

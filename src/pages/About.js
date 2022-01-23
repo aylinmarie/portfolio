@@ -8,12 +8,10 @@ const About = () => {
       </div>
       <div>
         <p>
-          My career didn’t start off in the creative industry. Not even close. I
-          spent hours in a cramped office ticking away at audit reports or
-          writing up risk procedures for banks. In 2017, I felt it was time to
-          shift gears and start figuring out what it means to “love what you
-          do”. I quit my job (after a year of self-teaching) and jumped into an
-          immersive web development program at General Assembly.
+          In 2017, I felt it was time to shift gears and start figuring out what
+          it means to “love what you do”. I quit my job (after a year of
+          self-teaching) and jumped into an immersive web development program at
+          General Assembly.
         </p>
 
         <p>

@@ -2,7 +2,7 @@ import * as React from "react";
 import "../../global.less";
 import * as stylesheet from "./App.module.less";
 
-import About from "./about.js";
+import About from "./About.js";
 import Work from "./work/index.js";
 import Projects from "./project/index.js";
 

@@ -6,7 +6,11 @@ import ReactGA from "react-ga";
 import App from "./App.js";
 
 ReactGA.initialize("UA-66263407-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+try {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+} catch (e) {
+  console.log(e);
+}
 
 const IndexPage = () => {
   const LINKS = [

@@ -7,6 +7,7 @@ import Nav from "./Nav";
 
 import * as stylesheet from "./Layout.module.less";
 function Layout({ children }) {
+  // window not recognized during Netlify build process
   const url = typeof window !== "undefined" ? window.location.pathname : "";
   const isHome = url === "/";
 

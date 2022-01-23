@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import "../../global.less";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
@@ -6,24 +6,43 @@ import ReactGA from "react-ga";
 import favicon from "../images/favicon.ico";
 import App from "./App.js";
 import Layout from "../components/Layout";
+import BackToTop from "../components/BackToTop";
 
-ReactGA.initialize("UA-66263407-1");
+// window not recognized during Netlify build process
+let _window;
 try {
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  _window = window;
 } catch (e) {
   console.log(e);
 }
 
+ReactGA.initialize("UA-66263407-1");
+ReactGA.pageview(_window.location.pathname + _window.location.search);
+
 const IndexPage = () => {
+  // The back-to-top button is hidden at the beginning
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    _window.addEventListener("scroll", () => {
+      if (_window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <Helmet>
         <link rel="icon" href={favicon} />
-        <title>Aylin Marie - Portfolio</title>
+        <title>Aylin Marie</title>
       </Helmet>
       <Layout>
         <App />
       </Layout>
+      {showButton && <BackToTop />}
     </>
   );
 };

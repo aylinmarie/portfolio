@@ -1,0 +1,19 @@
+@import "../../../global.less";
+
+.root{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    background: var(--graphite);
+    color: var(--stone);
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    transition: 0.2s ease;
+
+    &:hover, &:focus {
+        background: var(--clay);
+    }
+}

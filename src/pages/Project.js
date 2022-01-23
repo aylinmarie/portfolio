@@ -8,7 +8,7 @@ import ExternalLink from "../components/ExternalLink";
 import baImg from "../images/black_artisans.png";
 import portfolioImg from "../images/sample_portfolio.png";
 import knitImg from "../images/elegant_knit.png";
-import dataVizImg from "../images/dataviz.png";
+import dataVizImg from "../images/mailchimpdataviz.png";
 
 const Projects = () => {
   const PROJECT_ITEMS = [
@@ -54,21 +54,11 @@ const Projects = () => {
         {PROJECT_ITEMS.map((item) => {
           return item.external ? (
             <ExternalLink key={item.name} href={item.link}>
-              <img
-                src={item.img}
-                width={300}
-                height={300}
-                alt={item.description}
-              />
+              <img src={item.img} alt={item.description} />
             </ExternalLink>
           ) : (
             <Link key={item.name} to={item.link}>
-              <img
-                src={item.img}
-                width={300}
-                height={300}
-                alt={item.description}
-              />
+              <img src={item.img} alt={item.description} />
             </Link>
           );
         })}

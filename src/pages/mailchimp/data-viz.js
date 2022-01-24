@@ -1,6 +1,6 @@
 import * as React from "react";
-import colorCombo from "../../images/colorCombo.png";
-import dataViz from "../../images/dataviz.png";
+import colorCombo from "@images/colorCombo.png";
+import dataViz from "@images/dataviz.png";
 
 import { ExternalLink, Layout } from "@components";
 

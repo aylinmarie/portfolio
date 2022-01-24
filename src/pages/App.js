@@ -4,9 +4,9 @@ import * as stylesheet from "./App.module.less";
 
 import { ExternalLink } from "@components";
 
-import About from "./About.js";
-import Work from "./Work.js";
-import Projects from "./Project.js";
+import About from "./about.js";
+import Work from "./work.js";
+import Projects from "./projects.js";
 
 const App = () => {
   return (

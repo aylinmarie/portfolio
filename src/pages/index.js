@@ -3,8 +3,8 @@ import "../../global.less";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 
-import favicon from "../images/favicon.ico";
-import App from "./App.js";
+import favicon from "@images/favicon.ico";
+import App from "./app.js";
 
 import { Layout, BackToTop } from "@components";
 

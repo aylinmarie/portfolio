@@ -2,10 +2,12 @@ import * as React from "react";
 
 import ExternalLink from "../ExternalLink";
 
+import * as stylesheet from "./Footer.module.less";
+
 export default function Footer() {
   const LINKS = [
     {
-      name: "hello@aylinmarie.co",
+      name: "Email",
       url: "mailto:hello@aylinmarie.co",
     },
     {
@@ -17,29 +19,26 @@ export default function Footer() {
       url: "https://twitter.com/aylin_marie",
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/aylinmcg",
-    },
-    {
       name: "GitHub",
       url: "https://github.com/aylinmarie",
     },
-    {
-      name: "CodePen",
-      url: "https://codepen.io/aylinmarie",
-    },
   ];
+
   return (
-    <footer>
-      <ul>
-        {LINKS.map((link) => {
-          return (
-            <li key={link.name}>
-              <ExternalLink href={link.url}>{link.name}</ExternalLink>
-            </li>
-          );
-        })}
-      </ul>
+    <footer className={stylesheet.root}>
+      <div>
+        <h2 className="h3">Let's Connect</h2>
+        <ul>
+          {LINKS.map((link) => {
+            return (
+              <li key={link.name}>
+                <ExternalLink href={link.url}>{link.name}</ExternalLink>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
       <span>
         Built with{" "}
         <ExternalLink href="https://www.gatsbyjs.com/">Gatsby</ExternalLink>

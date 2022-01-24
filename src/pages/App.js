@@ -2,7 +2,7 @@ import * as React from "react";
 import "../../global.less";
 import * as stylesheet from "./App.module.less";
 
-import ExternalLink from "../components/ExternalLink";
+import { ExternalLink } from "@components";
 
 import About from "./About.js";
 import Work from "./Work.js";

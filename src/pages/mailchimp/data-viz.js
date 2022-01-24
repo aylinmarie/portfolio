@@ -2,9 +2,7 @@ import * as React from "react";
 import colorCombo from "../../images/colorCombo.png";
 import dataViz from "../../images/dataviz.png";
 
-import ExternalLink from "../../components/ExternalLink";
-
-import Layout from "../../components/Layout";
+import { ExternalLink, Layout } from "@components";
 
 const DataViz = () => {
   return (

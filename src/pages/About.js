@@ -1,5 +1,5 @@
 import * as React from "react";
-import ExternalLink from "../components/ExternalLink";
+import { ExternalLink } from "@components";
 
 const About = () => {
   return (

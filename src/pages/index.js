@@ -5,8 +5,8 @@ import ReactGA from "react-ga";
 
 import favicon from "../images/favicon.ico";
 import App from "./App.js";
-import Layout from "../components/Layout";
-import BackToTop from "../components/BackToTop";
+
+import { Layout, BackToTop } from "@components";
 
 // window not recognized during Netlify build process
 let _window;

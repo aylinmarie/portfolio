@@ -3,7 +3,7 @@ import * as stylesheet from "./Projects.module.less";
 
 import { Link } from "gatsby";
 
-import ExternalLink from "../components/ExternalLink";
+import { ExternalLink } from "@components";
 
 import baImg from "../images/black_artisans.png";
 import portfolioImg from "../images/sample_portfolio.png";

@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as stylesheet from "./Work.module.less";
+import * as stylesheet from "./work.module.less";
 
 import { ExternalLink, Badge } from "@components";
 

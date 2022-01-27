@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as stylesheet from "./Projects.module.less";
+import * as stylesheet from "./projects.module.less";
 
 import { Link } from "gatsby";
 

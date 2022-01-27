@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../../global.less";
-import * as stylesheet from "./App.module.less";
+import * as stylesheet from "./app.module.less";
 
 import { ExternalLink } from "@components";
 

@@ -1,0 +1,157 @@
+@import "./variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(10deg, #ffffff 60%, var(--stone) 60%);
+  color: var(--graphite);
+  font-family: mulish, san-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  word-break: break-word;
+}
+
+p {
+  max-width: 70ch;
+}
+
+a {
+  color: var(--clay);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--graphite);
+    outline-color: var(--clay);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: 0.2s ease;
+  }
+}
+
+p a,
+span a,
+nav a,
+li a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+
+  &:hover,
+  &:focus {
+    padding-bottom: 0;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 70ch;
+  margin-top: calc(var(--base-unit) * 7);
+  border: 1px solid var(--clay);
+}
+
+code {
+  font-family: "Cutive Mono", monospace;
+}
+
+pre {
+  background-color: var(--graphite);
+  padding: calc(var(--base-unit) * 2) calc(var(--base-unit) * 4);
+  white-space: pre-wrap;
+
+  code {
+    color: var(--stone);
+  }
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  font-family: ivypresto-display;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  padding-bottom: 2rem;
+}
+
+h2,
+.h2 {
+  font-weight: 300;
+  font-size: 3.2rem;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+}
+
+h3,
+.h3 {
+  font-weight: 300;
+  font-size: 2.4rem;
+  padding-bottom: 0.5rem;
+}
+
+h4,
+.h4 {
+  font-family: mulish, san-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 9rem;
+  padding-top: 3rem;
+}
+
+.title {
+  font-size: 6.4rem;
+}
+
+.grid {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  grid-gap: 3rem;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.h2Line {
+  display: inline;
+  margin-right: calc(var(--base-unit) * 4);
+}
+
+.line {
+  display: inline-block;
+  border-top: 0.1rem solid var(--graphite);
+  width: 10rem;
+  transform: translateY(-1rem);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,12 +1,13 @@
 import * as React from "react";
-import "../../global.less";
-import * as stylesheet from "./app.module.less";
+import "../styles/global.scss";
 
 import { ExternalLink } from "@components";
 
 import About from "./about.js";
 import Work from "./work.js";
 import Projects from "./projects.js";
+
+import * as stylesheet from "./app.module.scss";
 
 const App = () => {
   return (

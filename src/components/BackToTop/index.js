@@ -3,7 +3,7 @@ import { ArrowUp } from "react-feather";
 
 import VisuallyHidden from "../VisuallyHidden";
 
-import * as stylesheet from "./BackToTop.module.less";
+import * as stylesheet from "./BackToTop.module.scss";
 
 const BackToTop = () => {
   const scrollToTop = () => {

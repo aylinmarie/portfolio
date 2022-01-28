@@ -2,7 +2,7 @@ import * as React from "react";
 
 import ExternalLink from "../ExternalLink";
 
-import * as stylesheet from "./Footer.module.less";
+import * as stylesheet from "./Footer.module.scss";
 
 export default function Footer() {
   const LINKS = [

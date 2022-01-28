@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
-import * as stylesheet from "./Layout.module.less";
+import * as stylesheet from "./Layout.module.scss";
 function Layout({ children }) {
   // window not recognized during Netlify build process
   const url = typeof window !== "undefined" ? window.location.pathname : "";

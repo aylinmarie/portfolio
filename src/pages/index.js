@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../../global.less";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 
@@ -7,6 +6,8 @@ import favicon from "@images/favicon.ico";
 import App from "./app.js";
 
 import { Layout, BackToTop } from "@components";
+
+import "../styles/global.scss";
 
 // window not recognized during Netlify build process
 let _window;

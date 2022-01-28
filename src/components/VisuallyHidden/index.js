@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import * as stylesheet from "./VisuallyHidden.module.less";
+import * as stylesheet from "./VisuallyHidden.module.scss";
 
 const VisuallyHidden = ({ children }) => {
   return <span className={stylesheet.root}>{children}</span>;

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.aylinmarie.co",
     title: "aylin-marie",
   },
   plugins: [
@@ -8,7 +8,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-less",
+    "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",

@@ -1,7 +1,7 @@
 import * as React from "react";
-import * as stylesheet from "./work.module.less";
 
 import { ExternalLink, Badge } from "@components";
+import * as stylesheet from "./work.module.scss";
 
 const Work = () => {
   return (

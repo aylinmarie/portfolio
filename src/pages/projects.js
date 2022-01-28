@@ -1,11 +1,10 @@
 import * as React from "react";
-import * as stylesheet from "./projects.module.less";
-
 import { Link } from "gatsby";
 
 import { ExternalLink } from "@components";
-
 import PROJECT_ITEMS from "../data/work.js";
+
+import * as stylesheet from "./projects.module.scss";
 
 const Projects = () => {
   return (

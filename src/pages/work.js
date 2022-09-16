@@ -15,10 +15,14 @@ const Work = () => {
           <Badge>Mailchimp</Badge>
 
           <p>
-            Currently building React components, creating design tokens, testing
-            for accessibility and writing documentation for our pattern library.
-            I work with product teams by onboarding them into our new design
-            system and support them during implementation.
+            Scaling the Mailchimp design system with React components, design
+            tokens, accessibility and design guidelines. Working to soften the
+            friction between engineering and design collaboration. I support
+            product teams by onboarding them into our new design system and
+            advise engineers during implementation. I have facilitated
+            onboarding an accessibility platform to the company to test our
+            system components and featured projects to remediate critical
+            issues.
           </p>
         </div>
 
@@ -27,11 +31,10 @@ const Work = () => {
           <Badge>Banyan</Badge>
 
           <p>
-            Front end developer who created and maintained end-to-end web
-            application development using Angular and Drupal for non-profits,
-            businesses, and government entities. Clients included Centers for
-            Disease Control and Prevention (CDC) and American Academy of
-            Pediatrics.
+            Created and maintained end-to-end web application development using
+            Angular and Drupal for non-profits, businesses, and government
+            entities. Clients included Centers for Disease Control and
+            Prevention (CDC) and American Academy of Pediatrics.
           </p>
         </div>
 
@@ -41,16 +44,15 @@ const Work = () => {
 
           <p>
             Helping small businesses and entrepreneurs has been a passion of
-            mine. I helped build brands and websites exclusively on Squarespace
-            for a number of clients. As an independent front end developer, I
-            was also a Squarespace Circle Member growing my web design practice.
-            I was featured on a{" "}
+            mine. I crafted brands and websites exclusively on Squarespace for a
+            number of clients. As an independent front end developer, I was also
+            a Squarespace Circle Member growing my web design practice. I was
+            featured on a{" "}
             <ExternalLink href="https://circle.squarespace.com/member-stories/aylin-marie">
               Squarespace member story
             </ExternalLink>{" "}
-            sharing my journey from accounting to finding my craft in the tech
-            space. I've worked with them as a 2017 Portfolio Consultant during
-            the{" "}
+            sharing my journey from accounting to web development. I've worked
+            with them as a 2017 Portfolio Consultant during the{" "}
             <ExternalLink href="https://www.a3cfestival.com/conference">
               A3C Conference
             </ExternalLink>{" "}

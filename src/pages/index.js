@@ -41,6 +41,7 @@ const IndexPage = () => {
       <Helmet>
         <link rel="icon" href={favicon} />
         <title>Aylin Marie</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Helmet>
       <Layout>
         <App />

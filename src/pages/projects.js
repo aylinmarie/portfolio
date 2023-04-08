@@ -2,7 +2,6 @@ import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
 import { ExternalLink } from "@components";
-import PROJECT_ITEMS from "../data/work.js";
 
 import * as stylesheet from "./projects.module.scss";
 
@@ -27,7 +26,7 @@ const Projects = () => {
     `
   );
 
-  const edge = data.allContentfulProject.edges;
+  const EDGES = data.allContentfulProject.edges;
 
   return (
     <section className="grid">
@@ -35,15 +34,21 @@ const Projects = () => {
         <h2 className="h2Line">Projects</h2> <span className="line" />
       </div>
       <div className={stylesheet.gallery}>
-        {PROJECT_ITEMS.map((item) => {
-          return item.external ? (
-            <ExternalLink key={item.name} href={item.link}>
-              <img src={item.img} alt={item.description} />
-            </ExternalLink>
-          ) : (
-            <Link key={item.name} to={item.link}>
-              <img src={item.img} alt={item.description} />
+        {EDGES.map((item) => {
+          return item.node.path.indexOf("http") ? (
+            <Link key={item.node.title} to={item.node.path}>
+              <img
+                src={item.node.previewImage.url}
+                alt={item.node.previewImage.title}
+              />
             </Link>
+          ) : (
+            <ExternalLink key={item.node.title} href={item.node.path}>
+              <img
+                src={item.node.previewImage.url}
+                alt={item.node.previewImage.title}
+              />
+            </ExternalLink>
           );
         })}
       </div>

@@ -49,9 +49,8 @@ li a {
 }
 
 img {
-  width: 100%;
-  max-width: 70ch;
-  margin-top: calc(var(--base-unit) * 7);
+  // Override Gatsby setting
+  max-width: 70ch !important;
   border: 1px solid var(--clay);
 }
 

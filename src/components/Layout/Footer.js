@@ -39,13 +39,13 @@ export default function Footer() {
         </ul>
       </div>
 
-      <span>
+      <div className={stylesheet.built}>
         Built with{" "}
         <ExternalLink href="https://www.gatsbyjs.com/">Gatsby</ExternalLink> +{" "}
         <ExternalLink href="https://www.contentful.com/">
           Contentful
         </ExternalLink>
-      </span>
+      </div>
     </footer>
   );
 }

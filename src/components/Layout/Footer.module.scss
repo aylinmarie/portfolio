@@ -17,4 +17,8 @@
         flex-wrap: wrap;
         gap: calc(var(--base-unit) * 5);
     }
+
+    .built {
+        margin-right: calc(var(--base-unit) * 20);
+    }
 }

@@ -35,19 +35,15 @@ const Projects = () => {
       </div>
       <div className={stylesheet.gallery}>
         {EDGES.map((item) => {
-          return item.node.path.indexOf("http") ? (
-            <Link key={item.node.title} to={item.node.path}>
-              <img
-                src={item.node.previewImage.url}
-                alt={item.node.previewImage.title}
-              />
+          const { title, path, previewImage } = item.node;
+
+          return path.indexOf("http") ? (
+            <Link key={title} to={`/projects/${path}`}>
+              <img src={previewImage.url} alt={previewImage.title} />
             </Link>
           ) : (
-            <ExternalLink key={item.node.title} href={item.node.path}>
-              <img
-                src={item.node.previewImage.url}
-                alt={item.node.previewImage.title}
-              />
+            <ExternalLink key={title} href={path}>
+              <img src={previewImage.url} alt={previewImage.title} />
             </ExternalLink>
           );
         })}

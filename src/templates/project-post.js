@@ -10,7 +10,7 @@ export const query = graphql`
   query ($slug: String!) {
     contentfulProject(path: { eq: $slug }) {
       title
-      description {
+      richText {
         raw
         references {
           ... on ContentfulAsset {
@@ -26,7 +26,7 @@ export const query = graphql`
 `;
 
 const ProjectPost = (props) => {
-  const { title, description } = props.data.contentfulProject;
+  const { title, richText } = props.data.contentfulProject;
 
   const options = {
     renderNode: {
@@ -48,7 +48,7 @@ const ProjectPost = (props) => {
           <h1 className="h2 h2Line">{title}</h1>
           <span className="line" />
         </div>
-        <div>{description && renderRichText(description, options)}</div>
+        <div>{richText && renderRichText(richText, options)}</div>
       </section>
     </Layout>
   );

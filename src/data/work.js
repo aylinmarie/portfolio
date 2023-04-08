@@ -30,7 +30,7 @@ export default [
   },
   {
     name: "Mailchimp Data Visualization",
-    link: "/mailchimp/data-viz",
+    link: "/projects/mailchimp-data-viz",
     img: dataVizImg,
     description: "Refresh of Mailchimp's data visualization.",
     external: false,

@@ -1,7 +1,12 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.aylinmarie.co",
-    title: "aylin-marie",
+    title: "Aylin Marie",
+    author: "@aylin_marie",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -10,6 +15,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -25,6 +31,13 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
   ],
 };

@@ -1,12 +1,35 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
+import { StaticImage } from "gatsby-plugin-image";
 import { ExternalLink } from "@components";
 import PROJECT_ITEMS from "../data/work.js";
 
 import * as stylesheet from "./projects.module.scss";
 
 const Projects = () => {
+  const data = useStaticQuery(
+    graphql`
+      query MyProjectQuery {
+        allContentfulProject {
+          edges {
+            node {
+              id
+              title
+              path
+              previewImage {
+                title
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const edge = data.allContentfulProject.edges;
+
   return (
     <section className="grid">
       <div>

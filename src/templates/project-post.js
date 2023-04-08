@@ -31,12 +31,12 @@ const ProjectPost = (props) => {
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
-        const { gatsbyImageData } = node.data.target;
+        const { gatsbyImageData, title } = node.data.target;
         if (!gatsbyImageData) {
           // asset is not an image
           return null;
         }
-        return <GatsbyImage image={gatsbyImageData} />;
+        return <GatsbyImage image={gatsbyImageData} alt={title} />;
       },
     },
   };

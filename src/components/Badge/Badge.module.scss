@@ -1,7 +1,7 @@
 @import "../../styles/global.scss";
 
 .root {
-    padding: 4px 12px;
+    padding: var(--base-unit) calc(var(--base-unit) * 3);
     background-color: var(--clay);
     color: var(--stone);
     text-transform: uppercase;

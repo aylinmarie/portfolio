@@ -1,15 +1,54 @@
 import * as React from "react";
-import "../styles/global.scss";
+import { graphql, useStaticQuery } from "gatsby";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { MARKS } from "@contentful/rich-text-types";
 
 import { ExternalLink } from "@components";
 
-import About from "./about.js";
-import Work from "./work.js";
 import Projects from "./projects.js";
 
+import "../styles/global.scss";
 import * as stylesheet from "./app.module.scss";
+import * as badgeStyle from "../components/Badge/Badge.module.scss";
 
 const App = () => {
+  // Contentful data
+  const data = useStaticQuery(
+    graphql`
+      query MyWorkQuery {
+        allContentfulPortfolioSection {
+          edges {
+            node {
+              title
+              body {
+                raw
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const DATA = data.allContentfulPortfolioSection.edges;
+
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: (text) => <b className={badgeStyle.root}>{text}</b>,
+    },
+  };
+
+  // Sort data title in alphabetical order
+  function compare(a, b) {
+    if (a.node.title < b.node.title) {
+      return -1;
+    }
+    if (a.node.title > b.node.title) {
+      return 1;
+    }
+    return 0;
+  }
+
   return (
     <>
       <section className={stylesheet.intro}>
@@ -30,8 +69,21 @@ const App = () => {
         </p>
       </section>
 
-      <About />
-      <Work />
+      {/* Section Content */}
+      {DATA.sort(compare).map((content) => {
+        const { title, body } = content.node;
+
+        return (
+          <section className="grid" key={title}>
+            <div>
+              <h2 className="h2Line">{title}</h2> <span className="line" />
+            </div>
+            <div>{body && renderRichText(body, options)}</div>
+          </section>
+        );
+      })}
+
+      {/* Personal Projects */}
       <Projects />
     </>
   );

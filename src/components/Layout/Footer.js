@@ -41,7 +41,10 @@ export default function Footer() {
 
       <span>
         Built with{" "}
-        <ExternalLink href="https://www.gatsbyjs.com/">Gatsby</ExternalLink>
+        <ExternalLink href="https://www.gatsbyjs.com/">Gatsby</ExternalLink> +{" "}
+        <ExternalLink href="https://www.contentful.com/">
+          Contentful
+        </ExternalLink>
       </span>
     </footer>
   );

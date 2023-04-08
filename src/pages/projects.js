@@ -6,6 +6,7 @@ import { ExternalLink } from "@components";
 import * as stylesheet from "./projects.module.scss";
 
 const Projects = () => {
+  // Contentful data
   const data = useStaticQuery(
     graphql`
       query MyProjectQuery {
@@ -38,10 +39,12 @@ const Projects = () => {
           const { title, path, previewImage } = item.node;
 
           return path.indexOf("http") ? (
+            // Internal Links
             <Link key={title} to={`/projects/${path}`}>
               <img src={previewImage.url} alt={previewImage.title} />
             </Link>
           ) : (
+            // External Links
             <ExternalLink key={title} href={path}>
               <img src={previewImage.url} alt={previewImage.title} />
             </ExternalLink>

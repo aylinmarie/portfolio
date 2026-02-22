@@ -10,6 +10,7 @@ const fadeUp = {
   }),
 };
 
+// test: trigger pre-commit hook
 export default function Hero() {
   return (
     <Box

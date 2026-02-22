@@ -65,6 +65,7 @@ export default function Navbar() {
         {/* Left: orbital icon */}
         <Link
           href="#home"
+          aria-label="Home"
           _hover={{ opacity: 0.6, textDecoration: "none" }}
           transition="opacity 0.2s ease"
           display="flex"

@@ -1,5 +1,5 @@
-import { Box, Text, Link, VStack, Divider } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Box, Text, VStack, Divider } from "@chakra-ui/react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
@@ -11,16 +11,16 @@ const fadeIn = {
 };
 
 const otherThings = [
-  { label: "Founder of OneYoungTraveler LLC", href: null },
-  { label: "General Assembly Workshop Instructor", href: null },
-  { label: "Squarespace Circle Member Feature", href: null },
-  {
-    label: "Portfolio Consultant - 2017 A3C Creator Complex Conference",
-    href: null,
-  },
+  "Founder of OneYoungTraveler LLC",
+  "General Assembly Workshop Instructor",
+  "Squarespace Circle Member Feature",
+  "Portfolio Consultant - 2017 A3C Creator Complex Conference",
 ];
 
 export default function About() {
+  const shouldReduceMotion = useReducedMotion();
+  const animation = shouldReduceMotion ? {} : fadeIn;
+
   return (
     <Box
       as="section"
@@ -39,9 +39,10 @@ export default function About() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               custom={0}
-              variants={fadeIn}
+              variants={animation}
             >
               <Box
+                as="h2"
                 fontFamily="'Mulish', system-ui, sans-serif"
                 fontWeight="700"
                 fontSize={{ base: "32px", md: "38px", lg: "44px" }}
@@ -84,7 +85,7 @@ export default function About() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   custom={delay}
-                  variants={fadeIn}
+                  variants={animation}
                 >
                   <Text
                     fontFamily="'Mulish', system-ui, sans-serif"
@@ -107,9 +108,10 @@ export default function About() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               custom={0}
-              variants={fadeIn}
+              variants={animation}
             >
               <Text
+                as="h3"
                 fontFamily="'Mulish', system-ui, sans-serif"
                 fontWeight="700"
                 fontSize="15px"
@@ -121,14 +123,14 @@ export default function About() {
             </motion.div>
 
             <VStack align="start" spacing="3">
-              {otherThings.map(({ label, href }, i) => (
+              {otherThings.map((label, i) => (
                 <motion.div
                   key={label}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.4 }}
                   custom={i * 0.06}
-                  variants={fadeIn}
+                  variants={animation}
                 >
                   <Box
                     fontFamily="'Mulish', system-ui, sans-serif"
@@ -140,20 +142,9 @@ export default function About() {
                     <Box as="span" color="var(--marie-clay)" mr="2">
                       +
                     </Box>
-                    {href ? (
-                      <Link
-                        href={href}
-                        isExternal
-                        color="var(--marie-clay)"
-                        _hover={{ textDecoration: "underline" }}
-                      >
-                        {label}
-                      </Link>
-                    ) : (
-                      <Box as="span" color="var(--marie-clay)">
-                        {label}
-                      </Box>
-                    )}
+                    <Box as="span" color="var(--marie-clay)">
+                      {label}
+                    </Box>
                   </Box>
                 </motion.div>
               ))}

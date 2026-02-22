@@ -1,5 +1,6 @@
 import { Box, Text, Link, VStack, HStack, Image } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import heroImg from "../assets/aylin-atkins-lifestyle-57.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -11,6 +12,9 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+  const animation = shouldReduceMotion ? {} : fadeUp;
+
   return (
     <Box
       as="section"
@@ -32,7 +36,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={0}
-              variants={fadeUp}
+              variants={animation}
             >
               <Box
                 as="h1"
@@ -52,7 +56,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={0.15}
-              variants={fadeUp}
+              variants={animation}
             >
               <Text
                 fontFamily="'Mulish', system-ui, sans-serif"
@@ -82,12 +86,12 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             custom={0.3}
-            variants={fadeUp}
+            variants={animation}
             style={{ flex: 1, width: "100%" }}
           >
             <Image
-              src="/src/assets/aylin-atkins-lifestyle-57.webp"
-              alt="Aylin Atkins"
+              src={heroImg}
+              alt="Portrait of Aylin Atkins"
               borderRadius="md"
               w="100%"
               h="auto"

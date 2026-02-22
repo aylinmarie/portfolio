@@ -30,6 +30,23 @@ Find and remove:
 - Unused exports: Named exports that are not imported anywhere
 - Redundant duplicate logic
 
+## Commit Message Check
+
+Validate the commit message follows Conventional Commits format:
+https://www.conventionalcommits.org/en/v1.0.0/
+
+Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`, `revert`
+
+Format: `<type>[optional scope]: <description>`
+
+Examples:
+- `feat(hero): add lifestyle photo to right column`
+- `fix(navbar): correct mobile menu z-index`
+- `chore: update dependencies`
+- `refactor(theme): switch from Ivy Presto to Playfair Display`
+
+If the commit message does not follow this format, output a warning and a suggested corrected message. Do NOT block the commit — just warn.
+
 ## Auto-Fix Process
 
 1. Edit files to remove dead code and fix security issues
@@ -39,6 +56,11 @@ Find and remove:
 ## Output Format
 
 ```
+## Commit Message
+[PASS] Follows conventional commits format
+  — or —
+[WARN] Does not follow conventional commits. Suggested: `fix(hero): remove unused variable`
+
 ## Security Issues Found
 - [Issue 1]: [File:Line] - [Description]
 

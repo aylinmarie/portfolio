@@ -37,6 +37,7 @@ export default function Footer() {
             </Link>
 
             <Text
+              aria-hidden="true"
               color="var(--marie-sand)"
               display={{ base: "none", sm: "block" }}
               fontSize="14px"
@@ -47,6 +48,7 @@ export default function Footer() {
             <Link
               href="https://pinterest.com"
               isExternal
+              rel="noopener noreferrer"
               fontFamily="'Mulish', system-ui, sans-serif"
               fontWeight="400"
               fontSize="14px"
@@ -58,6 +60,7 @@ export default function Footer() {
             </Link>
 
             <Text
+              aria-hidden="true"
               color="var(--marie-sand)"
               display={{ base: "none", sm: "block" }}
               fontSize="14px"
@@ -68,6 +71,7 @@ export default function Footer() {
             <Link
               href="https://instagram.com"
               isExternal
+              rel="noopener noreferrer"
               fontFamily="'Mulish', system-ui, sans-serif"
               fontWeight="400"
               fontSize="14px"

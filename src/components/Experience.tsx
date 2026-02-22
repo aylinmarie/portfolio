@@ -1,5 +1,5 @@
 import { Box, Text, Link, VStack } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
@@ -11,6 +11,9 @@ const fadeIn = {
 };
 
 export default function Experience() {
+  const shouldReduceMotion = useReducedMotion();
+  const animation = shouldReduceMotion ? {} : fadeIn;
+
   return (
     <Box
       as="section"
@@ -25,9 +28,10 @@ export default function Experience() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           custom={0}
-          variants={fadeIn}
+          variants={animation}
         >
           <Text
+            as="h2"
             fontFamily="'Mulish', system-ui, sans-serif"
             fontWeight="700"
             fontSize="13px"
@@ -53,7 +57,7 @@ export default function Experience() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               custom={delay}
-              variants={fadeIn}
+              variants={animation}
             >
               <Text
                 fontFamily="'Mulish', system-ui, sans-serif"
@@ -72,11 +76,12 @@ export default function Experience() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             custom={0.15}
-            variants={fadeIn}
+            variants={animation}
           >
             <Link
               href="https://linkedin.com"
               isExternal
+              rel="noopener noreferrer"
               fontFamily="'Mulish', system-ui, sans-serif"
               fontWeight="400"
               fontSize={{ base: "13px", md: "14px" }}

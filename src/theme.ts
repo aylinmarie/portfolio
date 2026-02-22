@@ -6,7 +6,6 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    // Playfair Display for headings (Google Fonts)
     heading: "'Playfair Display', Georgia, serif",
     body: "'Mulish', system-ui, sans-serif",
   },

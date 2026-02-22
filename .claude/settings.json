@@ -8,8 +8,5 @@
       "Bash(npm run lint)",
       "Bash(npm run build)"
     ]
-  },
-  "hooks": {
-    "pre-commit": "Pre-commit Security & Dead Code Reviewer"
   }
 }

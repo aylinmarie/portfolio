@@ -10,7 +10,6 @@ const fadeUp = {
   }),
 };
 
-// test: verify hook with full claude path
 export default function Hero() {
   return (
     <Box
@@ -67,6 +66,7 @@ export default function Hero() {
                 <Link
                   href="https://mailchimp.com"
                   isExternal
+                  rel="noopener noreferrer"
                   color="var(--marie-clay)"
                   _hover={{ textDecoration: "underline" }}
                 >

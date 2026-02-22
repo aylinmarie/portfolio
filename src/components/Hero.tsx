@@ -10,7 +10,7 @@ const fadeUp = {
   }),
 };
 
-// test: trigger pre-commit hook
+// test: verify hook with full claude path
 export default function Hero() {
   return (
     <Box

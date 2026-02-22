@@ -1,76 +1,85 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Link,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Flex, Text, Link } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
-  const year = new Date().getFullYear()
-
   return (
     <Box
-      id="contact"
       as="footer"
-      px={{ base: 6, md: 12, lg: 20 }}
-      py={12}
+      px={{ base: "6", md: "10", lg: "14" }}
+      py={{ base: "10", md: "12" }}
       borderTop="1px solid"
-      borderColor="rgba(44,44,44,0.1)"
+      borderColor="var(--marie-sand)"
+      style={{ borderTopColor: "rgba(204,175,164,0.4)" }}
     >
-      <Flex
-        direction={{ base: 'column', md: 'row' }}
-        justify="space-between"
-        align={{ base: 'flex-start', md: 'center' }}
-        gap={6}
-      >
-        {/* Left: email */}
-        <VStack align="flex-start" spacing={1}>
-          <Text fontSize="xs" letterSpacing="0.12em" textTransform="uppercase" color="brand.muted">
-            Get in touch
-          </Text>
-          <Link
-            href="mailto:hello@aylinmarie.com"
-            fontSize="sm"
-            fontWeight="500"
-            color="brand.dark"
-            _hover={{ color: 'brand.terracotta' }}
-            transition="color 0.2s"
+      <Box maxW="900px" mx="auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Flex
+            direction={{ base: "column", sm: "row" }}
+            justify="flex-end"
+            align={{ base: "start", sm: "center" }}
+            gap={{ base: "2", sm: "4" }}
           >
-            hello@aylinmarie.com
-          </Link>
-        </VStack>
-
-        {/* Right: social links */}
-        <HStack spacing={8}>
-          {[
-            { label: 'Pinterest', href: '#' },
-            { label: 'Instagram', href: '#' },
-            { label: 'LinkedIn', href: '#' },
-          ].map((link) => (
             <Link
-              key={link.label}
-              href={link.href}
-              isExternal
-              fontSize="xs"
-              fontWeight="500"
-              letterSpacing="0.12em"
-              textTransform="uppercase"
-              color="brand.muted"
-              _hover={{ color: 'brand.terracotta' }}
-              transition="color 0.2s"
+              href="mailto:hello@aylinmarie.co"
+              fontFamily="'Mulish', system-ui, sans-serif"
+              fontWeight="400"
+              fontSize="14px"
+              color="var(--marie-graphite)"
+              _hover={{ color: "var(--marie-clay)", textDecoration: "none" }}
+              transition="color 0.2s ease"
             >
-              {link.label}
+              hello@aylinmarie.co
             </Link>
-          ))}
-        </HStack>
-      </Flex>
 
-      {/* Bottom line */}
-      <Text fontSize="xs" color="brand.muted" mt={10} opacity={0.6}>
-        © {year} Aylin Marie. Designed with care.
-      </Text>
+            <Text
+              color="var(--marie-sand)"
+              display={{ base: "none", sm: "block" }}
+              fontSize="14px"
+            >
+              |
+            </Text>
+
+            <Link
+              href="https://pinterest.com"
+              isExternal
+              fontFamily="'Mulish', system-ui, sans-serif"
+              fontWeight="400"
+              fontSize="14px"
+              color="var(--marie-graphite)"
+              _hover={{ color: "var(--marie-clay)", textDecoration: "none" }}
+              transition="color 0.2s ease"
+            >
+              Pinterest
+            </Link>
+
+            <Text
+              color="var(--marie-sand)"
+              display={{ base: "none", sm: "block" }}
+              fontSize="14px"
+            >
+              |
+            </Text>
+
+            <Link
+              href="https://instagram.com"
+              isExternal
+              fontFamily="'Mulish', system-ui, sans-serif"
+              fontWeight="400"
+              fontSize="14px"
+              color="var(--marie-graphite)"
+              _hover={{ color: "var(--marie-clay)", textDecoration: "none" }}
+              transition="color 0.2s ease"
+            >
+              Instagram
+            </Link>
+          </Flex>
+        </motion.div>
+      </Box>
     </Box>
-  )
+  );
 }

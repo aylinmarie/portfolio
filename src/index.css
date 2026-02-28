@@ -4,23 +4,70 @@
   padding: 0;
 }
 
+/* ================================================================
+   GLOBAL TOKENS
+   Raw primitive values. Never referenced directly in component
+   styles — only consumed by semantic tokens below.
+   ================================================================ */
+
 :root {
-  --orange: #C4501A;
-  --black: #111111;
-  --bg: #F9F8F6;
-  --muted: #777777;
-  --border: #E3E3E0;
-  --nav-scrolled-bg: rgba(249, 248, 246, 0.94);
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Color palette */
+  --global-color-orange-500:       #C4501A;
+  --global-color-neutral-50:       #F9F8F6;
+  --global-color-neutral-200:      #E3E3E0;
+  --global-color-neutral-500:      #777777;
+  --global-color-neutral-900:      #111111;
+  --global-color-neutral-dark-50:  #EDECE8;
+  --global-color-neutral-dark-200: #2A2A2A;
+  --global-color-neutral-dark-500: #888888;
+
+  /* Typography */
+  --global-font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-[data-theme="dark"] {
-  --black: #EDECE8;
-  --bg: #111111;
-  --muted: #888888;
-  --border: #2A2A2A;
-  --nav-scrolled-bg: rgba(17, 17, 17, 0.94);
+/* ================================================================
+   SEMANTIC TOKENS
+   Purpose-based aliases. These are the only tokens components
+   should reference — never the globals above.
+   ================================================================ */
+
+:root {
+  /* Backgrounds */
+  --color-surface:         var(--global-color-neutral-50);
+  --color-surface-overlay: color-mix(in srgb, var(--color-surface) 94%, transparent);
+
+  /* Text */
+  --color-text:            var(--global-color-neutral-900);
+  --color-text-subtle:     var(--global-color-neutral-500);
+
+  /* Interactive */
+  --color-accent:          var(--global-color-orange-500);
+
+  /* Structural */
+  --color-border:          var(--global-color-neutral-200);
+
+  /* Typography */
+  --font-family:           var(--global-font-family-sans);
 }
+
+/* ================================================================
+   DARK MODE
+   Overrides semantic tokens only. Global tokens are unchanged —
+   they remain the full palette that both themes draw from.
+   --color-accent is intentionally omitted: orange works in both.
+   --color-surface-overlay adapts automatically via color-mix.
+   ================================================================ */
+
+[data-theme="dark"] {
+  --color-surface:     var(--global-color-neutral-900);
+  --color-text:        var(--global-color-neutral-dark-50);
+  --color-text-subtle: var(--global-color-neutral-dark-500);
+  --color-border:      var(--global-color-neutral-dark-200);
+}
+
+/* ================================================================
+   BASE STYLES
+   ================================================================ */
 
 html {
   scroll-behavior: smooth;
@@ -33,9 +80,9 @@ html {
 }
 
 body {
-  font-family: var(--font);
-  background-color: var(--bg);
-  color: var(--black);
+  font-family: var(--font-family);
+  background-color: var(--color-surface);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;

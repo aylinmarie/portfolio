@@ -1,6 +1,6 @@
 .section {
   padding: 128px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
 }
 
 .inner {
@@ -14,7 +14,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--color-accent);
   margin-bottom: 64px;
 }
 
@@ -28,11 +28,11 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .item:first-of-type {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
 }
 
 .left {
@@ -44,27 +44,27 @@
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1;
-  color: var(--black);
+  color: var(--color-text);
   margin-bottom: 12px;
 }
 
 .role {
   font-size: 15px;
   font-weight: 600;
-  color: var(--black);
+  color: var(--color-text);
   margin-bottom: 4px;
 }
 
 .detail {
   font-size: 14px;
   font-weight: 400;
-  color: var(--muted);
+  color: var(--color-text-subtle);
 }
 
 .period {
   font-size: 13px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--color-text-subtle);
   white-space: nowrap;
   margin-left: 40px;
   padding-top: 6px;
@@ -76,15 +76,15 @@
   margin-top: 48px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--black);
-  border-bottom: 1px solid var(--orange);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-accent);
   padding-bottom: 2px;
   letter-spacing: 0.01em;
   transition: color 0.2s;
 }
 
 .linkedIn:hover {
-  color: var(--orange);
+  color: var(--color-accent);
 }
 
 @media (max-width: 640px) {

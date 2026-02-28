@@ -1,5 +1,5 @@
 .section {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +17,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--color-accent);
   margin-bottom: 64px;
 }
 
@@ -26,12 +26,12 @@
   font-weight: 900;
   line-height: 0.93;
   letter-spacing: -0.03em;
-  color: var(--black);
+  color: var(--color-text);
   margin-bottom: 64px;
 }
 
 .dot {
-  color: var(--orange);
+  color: var(--color-accent);
 }
 
 .links {
@@ -44,15 +44,15 @@
 .email {
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 600;
-  color: var(--black);
-  border-bottom: 2px solid var(--orange);
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-accent);
   padding-bottom: 3px;
   letter-spacing: -0.01em;
   transition: color 0.2s;
 }
 
 .email:hover {
-  color: var(--orange);
+  color: var(--color-accent);
 }
 
 .social {
@@ -65,16 +65,16 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--color-text-subtle);
   transition: color 0.2s;
 }
 
 .socialLink:hover {
-  color: var(--orange);
+  color: var(--color-accent);
 }
 
 .footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
   padding: 24px 48px;
 }
 
@@ -89,13 +89,13 @@
 .footerName {
   font-size: 12px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--color-text-subtle);
 }
 
 .footerRole {
   font-size: 12px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--color-text-subtle);
 }
 
 @media (max-width: 640px) {

@@ -1,6 +1,6 @@
 .section {
   padding: 128px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
 }
 
 .inner {
@@ -14,7 +14,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--color-accent);
   margin-bottom: 64px;
 }
 
@@ -35,7 +35,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
-  color: var(--black);
+  color: var(--color-text);
 }
 
 .also {
@@ -47,7 +47,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--color-text-subtle);
   margin-bottom: 24px;
 }
 
@@ -65,12 +65,12 @@
   gap: 16px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--black);
+  color: var(--color-text);
   line-height: 1.5;
 }
 
 .bullet {
-  color: var(--orange);
+  color: var(--color-accent);
   font-weight: 600;
   flex-shrink: 0;
 }

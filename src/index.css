@@ -10,7 +10,16 @@
   --bg: #F9F8F6;
   --muted: #777777;
   --border: #E3E3E0;
+  --nav-scrolled-bg: rgba(249, 248, 246, 0.94);
   --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] {
+  --black: #EDECE8;
+  --bg: #111111;
+  --muted: #888888;
+  --border: #2A2A2A;
+  --nav-scrolled-bg: rgba(17, 17, 17, 0.94);
 }
 
 html {

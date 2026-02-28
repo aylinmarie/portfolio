@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.inner}>
-        <span className={styles.label}>03 / Contact</span>
+        <span className={styles.label}>04 / Contact</span>
 
         <h2 className={styles.heading}>
           Let's work<br />

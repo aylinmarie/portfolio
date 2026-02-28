@@ -5,6 +5,7 @@ import styles from './Nav.module.css'
 const links = [
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
+  { label: 'Writing', href: '#writing' },
   { label: 'Contact', href: '#contact' },
 ]
 

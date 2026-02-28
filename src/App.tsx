@@ -1,19 +1,19 @@
-import Navbar from './components/Navbar'
+import Nav from './components/Nav'
 import Hero from './components/Hero'
-import Experience from './components/Experience'
+import Work from './components/Work'
 import About from './components/About'
-import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Nav />
       <main>
         <Hero />
-        <Experience />
+        <Work />
         <About />
+        <Contact />
       </main>
-      <Footer />
     </>
   )
 }

@@ -1,0 +1,89 @@
+.section {
+  padding: 128px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bio p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.also {
+  padding-top: 4px;
+}
+
+.alsoTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.alsoList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alsoItem {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.bullet {
+  color: var(--orange);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 80px 24px;
+  }
+}

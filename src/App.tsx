@@ -1,19 +1,23 @@
-import Navbar from './components/Navbar'
+import { Analytics } from '@vercel/analytics/react'
+import Nav from './components/Nav'
 import Hero from './components/Hero'
-import Experience from './components/Experience'
+import Work from './components/Work'
 import About from './components/About'
-import Footer from './components/Footer'
+import Writing from './components/Writing'
+import Contact from './components/Contact'
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Nav />
       <main>
         <Hero />
-        <Experience />
+        <Work />
         <About />
+        <Writing />
+        <Contact />
       </main>
-      <Footer />
+      <Analytics />
     </>
   )
 }

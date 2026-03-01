@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section id="about" className={styles.section}>
       <div className={styles.inner}>
-        <span className={styles.label}>02 / About</span>
+        <span className={styles.label}>03 / About</span>
 
         <div className={styles.grid}>
           <div className={styles.bio}>

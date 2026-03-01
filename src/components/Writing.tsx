@@ -7,7 +7,7 @@ export default function Writing() {
   return (
     <section id="writing" className={styles.section}>
       <div className={styles.inner}>
-        <span className={styles.label}>03 / Writing</span>
+        <span className={styles.label}>04 / Writing</span>
 
         <ul className={styles.list}>
           {posts.map((post) => (

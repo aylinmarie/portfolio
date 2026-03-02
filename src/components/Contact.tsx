@@ -1,20 +1,21 @@
+import { motion } from 'framer-motion'
+import { fadeUp, stagger } from '../lib/motion'
 import styles from './Contact.module.css'
 
 export default function Contact() {
   return (
-    <section id="contact" className={styles.section}>
-      <div className={styles.inner}>
-        <span className={styles.label}>04 / Contact</span>
+    <section id="contact" className={styles.section} aria-labelledby="contact-heading">
+      <motion.div
+        className={styles.inner}
+        variants={stagger()} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
+      >
+        <motion.span variants={fadeUp} className={styles.label}>05 / Contact</motion.span>
 
-        <h2 className={styles.heading}>
-          Let's work<br />
-          together<span className={styles.dot}>.</span>
-        </h2>
+        <motion.h2 id="contact-heading" variants={fadeUp} className={styles.heading}>
+          Let's connect<span className={styles.dot}>.</span>
+        </motion.h2>
 
-        <div className={styles.links}>
-          <a href="mailto:hello@aylinmarie.co" className={styles.email}>
-            hello@aylinmarie.co
-          </a>
+        <motion.div variants={fadeUp} className={styles.links}>
           <div className={styles.social}>
             <a
               href="https://linkedin.com/in/aylinmarie"
@@ -22,7 +23,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className={styles.socialLink}
             >
-              LinkedIn
+              LinkedIn<span className="sr-only"> (opens in new tab)</span>
             </a>
             <a
               href="https://github.com/aylinmarie"
@@ -30,16 +31,23 @@ export default function Contact() {
               rel="noopener noreferrer"
               className={styles.socialLink}
             >
-              GitHub
+              GitHub<span className="sr-only"> (opens in new tab)</span>
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerName}>Aylin Marie © 2025</span>
-          <span className={styles.footerRole}>Staff Software Engineer</span>
+          <span className={styles.footerName}>Aylin Marie © {new Date().getFullYear()}</span>
+          <span className={styles.footerRole}>
+            Built with{' '}
+            <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude<span className="sr-only"> (opens in new tab)</span></a>,{' '}
+            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel<span className="sr-only"> (opens in new tab)</span></a>,{' '}
+            <a href="https://react.dev" target="_blank" rel="noopener noreferrer">React<span className="sr-only"> (opens in new tab)</span></a>{' '}
+            &amp;{' '}
+            <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">Vite<span className="sr-only"> (opens in new tab)</span></a>
+          </span>
         </div>
       </div>
     </section>

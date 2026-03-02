@@ -4,10 +4,10 @@ import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
-    <section id="home" className={styles.hero}>
+    <section id="home" className={styles.hero} aria-labelledby="home-heading">
       <motion.div className={styles.inner} variants={stagger(0.15)} initial="hidden" animate="visible">
         <motion.p variants={fadeUp} className={styles.eyebrow}>Atlanta, GA</motion.p>
-        <motion.h1 variants={fadeUp} className={styles.heading}>
+        <motion.h1 id="home-heading" variants={fadeUp} className={styles.heading}>
           Merhaba!<br />
           I'm Aylin<span className={styles.dot}>.</span>
         </motion.h1>

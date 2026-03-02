@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { fadeUp, stagger } from '../lib/motion'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -26,13 +28,16 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className={styles.section}>
-      <div className={styles.inner}>
-        <span className={styles.label}>02 / Projects</span>
+    <section id="projects" className={styles.section} aria-labelledby="projects-heading">
+      <motion.div
+        className={styles.inner}
+        variants={stagger()} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
+      >
+        <motion.h2 id="projects-heading" variants={fadeUp} className={styles.label}>02 / Projects</motion.h2>
 
         <div className={styles.grid}>
           {projects.map((project) => (
-            <div key={project.name} className={styles.card}>
+            <motion.div key={project.name} variants={fadeUp} className={styles.card}>
               <div className={styles.cardHeader}>
                 <h3 className={styles.name}>{project.name}</h3>
                 {project.url && (
@@ -41,7 +46,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.arrow}
-                    aria-label={`View ${project.name}`}
+                    aria-label={`View ${project.name} (opens in new tab)`}
                   >
                     ↗
                   </a>
@@ -53,10 +58,10 @@ export default function Projects() {
                   <li key={tag} className={styles.tag}>{tag}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

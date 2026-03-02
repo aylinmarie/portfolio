@@ -79,9 +79,26 @@ export function substackPlugin(feedUrl: string): Plugin {
         const xml = await res.text()
         cache = parseRSS(xml)
         console.log(`[substack] fetched ${cache.length} posts from ${feedUrl}`)
-      } catch (err) {
-        console.warn(`[substack] could not fetch feed: ${err}`)
-        cache = []
+      } catch {
+        // Direct fetch failed (Cloudflare bot protection) — try RSS2JSON proxy
+        try {
+          const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`
+          const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) })
+          if (!res.ok) throw new Error(`HTTP ${res.status}`)
+          const json = await res.json() as { status: string; items: Array<{ title: string; link: string; pubDate: string }> }
+          if (json.status !== 'ok') throw new Error('RSS2JSON returned non-ok status')
+          cache = json.items.slice(0, 10).map(item => {
+            const dateObj = item.pubDate ? new Date(item.pubDate) : null
+            const date = dateObj && !isNaN(dateObj.getTime())
+              ? dateObj.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+              : ''
+            return { title: item.title, url: item.link, date }
+          })
+          console.log(`[substack] fetched ${cache.length} posts via RSS2JSON proxy`)
+        } catch (proxyErr) {
+          console.warn(`[substack] proxy also failed: ${proxyErr}`)
+          cache = []
+        }
       }
 
       return `export const posts = ${JSON.stringify(cache)}`

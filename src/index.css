@@ -21,7 +21,7 @@ a, button {
   --global-color-orange-600:       #B04415; /* dark-on-light: 5.3:1 on #F9F8F6  */
   --global-color-neutral-50:       #F9F8F6;
   --global-color-neutral-200:      #E3E3E0;
-  --global-color-neutral-500:      #777777;
+  --global-color-neutral-500:      #6B6B6B; /* 5.0:1 on #F9F8F6 — passes WCAG AA */
   --global-color-neutral-900:      #111111;
   --global-color-neutral-dark-50:  #EDECE8;
   --global-color-neutral-dark-200: #2A2A2A;

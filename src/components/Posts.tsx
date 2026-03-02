@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import { posts } from 'virtual:substack-posts'
-import styles from './Writing.module.css'
+import styles from './Posts.module.css'
 
-export default function Writing() {
+export default function Posts() {
   if (posts.length === 0) return null
 
   return (
-    <section id="writing" className={styles.section} aria-labelledby="writing-heading">
+    <section id="posts" className={styles.section} aria-labelledby="posts-heading">
       <motion.div
         className={styles.inner}
         variants={stagger()} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
       >
-        <motion.h2 id="writing-heading" variants={fadeUp} className={styles.label}>04 / Writing</motion.h2>
+        <motion.h2 id="posts-heading" variants={fadeUp} className={styles.label}>04 / Posts</motion.h2>
 
         <ul className={styles.list}>
           {posts.map((post) => (

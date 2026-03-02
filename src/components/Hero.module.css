@@ -43,7 +43,7 @@
   font-weight: 400;
   line-height: 1.65;
   color: var(--color-text-subtle);
-  max-width: 440px;
+  max-width: 840px;
   margin-bottom: 56px;
 }
 
@@ -51,22 +51,24 @@
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 3px;
   letter-spacing: 0.01em;
-  transition: color 0.2s;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
 .cta:hover {
-  color: var(--color-accent);
+  opacity: 0.7;
 }
 
 @media (max-width: 640px) {
   .hero {
     padding: 0 24px;
-    align-items: flex-end;
-    padding-bottom: 64px;
+    align-items: flex-start;
+    min-height: auto;
+    padding-bottom: 80px;
   }
 
   .inner {

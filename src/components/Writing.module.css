@@ -24,13 +24,6 @@
   margin: 0;
 }
 
-.item {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.item:first-child {
-  border-top: 1px solid var(--color-border);
-}
 
 .link {
   display: flex;
@@ -40,6 +33,7 @@
   padding: 24px 0;
   color: var(--color-text);
   text-decoration: none;
+  text-underline-offset: unset;
   transition: color 0.2s;
 }
 
@@ -90,20 +84,25 @@
   margin-top: 40px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-accent);
   border-bottom: 1px solid var(--color-accent);
   padding-bottom: 2px;
   letter-spacing: 0.01em;
-  transition: color 0.2s;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
 .substackLink:hover {
-  color: var(--color-accent);
+  opacity: 0.7;
 }
 
 @media (max-width: 640px) {
   .section {
     padding: 80px 24px;
+  }
+
+  .label {
+    margin-bottom: 40px;
   }
 
   .link {

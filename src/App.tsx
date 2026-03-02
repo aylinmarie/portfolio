@@ -1,3 +1,4 @@
+import { MotionConfig } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -9,9 +10,9 @@ import Contact from './components/Contact'
 
 export default function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Nav />
-      <main>
+      <main id="main-content">
         <Hero />
         <Work />
         <Projects />
@@ -20,6 +21,6 @@ export default function App() {
         <Contact />
       </main>
       <Analytics />
-    </>
+    </MotionConfig>
   )
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { useTheme } from '../hooks/useTheme'
 import styles from './Nav.module.css'
 
@@ -46,9 +47,17 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} aria-label="Main navigation">
+    <motion.nav
+      className={`${styles.nav} ${(scrolled || mobileOpen) ? styles.scrolled : ''}`}
+      aria-label="Main navigation"
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    >
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo} aria-label="Home">AM</a>
+        <a href="#home" className={styles.logo} aria-label="Aylin Marie — Home">
+          <img src="/logo.webp" alt="" className={styles.logoImg} />
+        </a>
 
         <ul className={styles.links}>
           {links.map(({ label, href }) => (
@@ -88,6 +97,6 @@ export default function Nav() {
           ))}
         </ul>
       )}
-    </nav>
+    </motion.nav>
   )
 }

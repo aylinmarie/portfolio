@@ -42,7 +42,7 @@ export default function About() {
                 As the landscape of development shifts, I'm now focused on the mechanics of velocity by building the tooling and AI-driven infrastructure that helps engineers ship UI faster without sacrificing quality or inclusive design.
               </p>
               <p>
-                My path started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only"> (opens in new tab)</span></a>. I was an independent Squarespace developer, moved through a creative agency focused on social good, and led me to Mailchimp, where I lead engineering for our design system.
+                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only">(opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Mailchimp. 
               </p>
             </div>
 

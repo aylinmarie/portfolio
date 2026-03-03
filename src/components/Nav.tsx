@@ -72,7 +72,10 @@ export default function Nav() {
           aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
           onClick={toggle}
         >
-          {dark ? <SunIcon /> : <MoonIcon />}
+          {dark ? <MoonIcon /> : <SunIcon />}
+          <span className={!dark ? styles.themeActive : styles.themeInactive}>Light</span>
+          <span className={styles.themeDivider}>/</span>
+          <span className={dark ? styles.themeActive : styles.themeInactive}>Dark</span>
         </button>
 
         <button

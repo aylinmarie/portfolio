@@ -68,26 +68,47 @@
 .themeToggle {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 44px;
+  gap: 6px;
   height: 44px;
+  padding: 0 10px;
   background: none;
   border: none;
   cursor: pointer;
   color: var(--color-text);
-  border-radius: 50%;
-  transition: color 0.2s, background 0.2s;
+  border-radius: 4px;
+  transition: background 0.2s;
   flex-shrink: 0;
 }
 
 .themeToggle:hover {
-  color: var(--color-accent);
   background: var(--color-border);
 }
 
 .themeToggle svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.themeActive {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.themeInactive {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.themeDivider {
+  font-size: 12px;
+  color: var(--color-border);
 }
 
 .hamburger {

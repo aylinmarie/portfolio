@@ -4,18 +4,18 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
-    name: 'Mailchimp Design System',
+    name: 'Knit Gauge Converter',
     description:
-      'Component library and design token architecture powering Mailchimp\'s product suite — built for accessibility, scale, and cross-team consistency.',
-    tags: ['React', 'TypeScript', 'Design Tokens', 'a11y'],
-    url: null,
+      'Web app that helps knitters substitute yarns by estimating gauge adjustments and needle recommendations. Features Ravelry pattern import and AI-powered guidance via Claude.',
+    tags: ['Next.js', 'React', 'Supabase', 'Claude AI'],
+    url: 'https://knit-gauge-converter.vercel.app/',
   },
   {
-    name: 'OneYoungTraveler',
+    name: 'Mailchimp Design System',
     description:
-      'Travel platform and community for young professionals exploring the world. Founded, designed, and built independently.',
-    tags: ['Next.js', 'Squarespace', 'Brand'],
-    url: 'https://oneyoungtraveler.com',
+      'Engineering Tech Lead. Component library and design token architecture powering Mailchimp\'s product suite — built for accessibility, scale, and cross-team consistency.',
+    tags: ['React', 'TypeScript', 'Design Tokens', 'a11y'],
+    url: null,
   },
   {
     name: 'This Portfolio',
@@ -37,20 +37,23 @@ export default function Projects() {
 
         <div className={styles.grid}>
           {projects.map((project) => (
-            <motion.div key={project.name} variants={fadeUp} className={styles.card}>
+            <motion.div
+              key={project.name}
+              variants={fadeUp}
+              className={`${styles.card}${project.url ? ` ${styles.cardLinked}` : ''}`}
+            >
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.cardLink}
+                  aria-label={`View ${project.name} (opens in new tab)`}
+                />
+              )}
               <div className={styles.cardHeader}>
                 <h3 className={styles.name}>{project.name}</h3>
-                {project.url && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.arrow}
-                    aria-label={`View ${project.name} (opens in new tab)`}
-                  >
-                    ↗
-                  </a>
-                )}
+                {project.url && <span className={styles.arrow} aria-hidden="true">↗</span>}
               </div>
               <p className={styles.description}>{project.description}</p>
               <ul className={styles.tags}>

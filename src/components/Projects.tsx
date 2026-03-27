@@ -64,6 +64,16 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+
+        <motion.a
+          variants={fadeUp}
+          href="https://github.com/aylinmarie"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.githubLink}
+        >
+          See other projects on GitHub →<span className="sr-only"> (opens in new tab)</span>
+        </motion.a>
       </motion.div>
     </section>
   )

@@ -18,7 +18,7 @@ export default function Contact() {
         <motion.div variants={fadeUp} className={styles.links}>
           <div className={styles.social}>
             <a
-              href="https://linkedin.com/in/aylinmarie"
+              href="https://www.linkedin.com/in/aylinatkins/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}

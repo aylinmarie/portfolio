@@ -8,7 +8,7 @@ const also: React.ReactNode[] = [
   'General Assembly Workshop Instructor',
   'Squarespace Circle Member',
   'Portfolio Consultant — 2017 A3C Creator Complex Conference',
-  'Amateur knitter + recently picked up sewing',
+  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only"> (opens in new tab)</span></a> + recently picked up sewing</>,
   'Visited 30+ countries and counting',
 ]
 

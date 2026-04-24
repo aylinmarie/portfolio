@@ -11,6 +11,13 @@ const projects = [
     url: 'https://knit-gauge-converter.vercel.app/',
   },
   {
+    name: 'Elegant Knit',
+    description:
+      'Personal inspiration board for saving favorite modern knit patterns, built with the Ravelry API.',
+    tags: ['React', 'Material UI', 'Ravelry API'],
+    url: 'https://elegant-knit.vercel.app/',
+  },
+  {
     name: 'Mailchimp Design System',
     description:
       'Engineering Tech Lead. Component library and design token architecture powering Mailchimp\'s product suite — built for accessibility, scale, and cross-team consistency.',

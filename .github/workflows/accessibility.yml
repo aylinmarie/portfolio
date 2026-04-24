@@ -39,4 +39,3 @@ jobs:
         uses: github/accessibility-scanner@v3.1.0
         with:
           urls: http://localhost:4173
-          path: dist

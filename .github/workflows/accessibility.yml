@@ -41,4 +41,4 @@ jobs:
           urls: http://localhost:4173
           repository: aylinmarie/portfolio
           token: ${{ secrets.GH_TOKEN }}
-          cache_key: cached_results-portfolio-${{ github.ref_name }}.json
+          cache_key: cached_results-portfolio-${{ github.sha }}.json

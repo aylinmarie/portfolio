@@ -39,4 +39,6 @@ jobs:
         uses: github/accessibility-scanner@v3.1.0
         with:
           urls: http://localhost:4173
-          path: dist
+          repository: aylinmarie/portfolio
+          token: ${{ secrets.GH_TOKEN }}
+          cache_key: cached_results-portfolio-${{ github.ref_name }}.json

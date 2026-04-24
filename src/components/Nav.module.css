@@ -38,10 +38,6 @@
   display: block;
 }
 
-[data-theme="dark"] .logoImg {
-  filter: invert(1);
-}
-
 .links {
   display: flex;
   gap: 40px;

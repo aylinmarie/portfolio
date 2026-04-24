@@ -42,7 +42,6 @@ export default function Contact() {
           <span className={styles.footerName}>Aylin Marie © {new Date().getFullYear()}</span>
           <span className={styles.footerRole}>
             Built with{' '}
-            <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude<span className="sr-only"> (opens in new tab)</span></a>,{' '}
             <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel<span className="sr-only"> (opens in new tab)</span></a>,{' '}
             <a href="https://react.dev" target="_blank" rel="noopener noreferrer">React<span className="sr-only"> (opens in new tab)</span></a>{' '}
             &amp;{' '}

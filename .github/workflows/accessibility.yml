@@ -1,24 +1,17 @@
-name: Accessibility Scan
+name: Accessibility
 
 on:
   pull_request:
-    types: [opened, synchronize, ready_for_review, reopened]
   push:
     branches: [main]
 
 jobs:
   accessibility:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
@@ -35,10 +28,5 @@ jobs:
       - name: Wait for server
         run: npx wait-on http://localhost:4173
 
-      - name: accessibility-scanner
-        uses: github/accessibility-scanner@v3.1.0
-        with:
-          urls: http://localhost:4173
-          repository: aylinmarie/portfolio
-          token: ${{ secrets.GH_TOKEN }}
-          cache_key: cached_results-portfolio-${{ github.sha }}.json
+      - name: Run axe accessibility scan
+        run: npx axe http://localhost:4173 --exit

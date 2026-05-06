@@ -55,3 +55,4 @@ All styles use semantic CSS custom properties defined in `src/index.css`. Never 
 
 - Working branch: `claude/create-portfolio-site-7JrXV` | Main: `main`
 - After every `git push`, open a PR with `gh pr create`
+- Never include Claude Code session URLs in commit messages or PR descriptions

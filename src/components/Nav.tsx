@@ -50,8 +50,8 @@ export default function Nav() {
     <motion.nav
       className={`${styles.nav} ${(scrolled || mobileOpen) ? styles.scrolled : ''}`}
       aria-label="Main navigation"
-      initial={{ opacity: 0, y: -12 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ y: -12 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className={styles.inner}>

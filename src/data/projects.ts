@@ -1,8 +1,17 @@
+export interface RelatedWork {
+  name: string
+  tags: string[]
+  image?: { src: string; alt: string }
+  approach: { heading: string; body: string }[]
+  outcome: string[]
+}
+
 export interface ProjectDetail {
   role: string
   image?: { src: string; alt: string }
   approach: { heading: string; body: string }[]
   outcome: string[]
+  related?: RelatedWork[]
 }
 
 export interface Project {
@@ -32,8 +41,8 @@ export const projects: Project[] = [
   {
     name: 'Mailchimp Design System',
     description:
-      "Engineering Tech Lead. Component library and design token architecture built for accessibility, scale, and cross-team consistency across Mailchimp's product suite.",
-    tags: ['React', 'TypeScript', 'Storybook', 'CSS Variables', 'Vite', 'a11y'],
+      "Engineering Tech Lead. Led design system engineering at Intuit Mailchimp, including the component library and token architecture, CSS variable dark mode, and the 2025 product redesign.",
+    tags: ['React', 'TypeScript', 'CSS Variables', 'Design Tokens', 'Storybook', 'a11y', 'Technical Leadership'],
     url: null,
     slug: 'mailchimp-design-system',
     detail: {
@@ -58,40 +67,59 @@ export const projects: Project[] = [
         'Multiple teams shipped accessible UI without additional accessibility review cycles.',
         'Cross-functional contribution model brought engineers from 4+ teams with zero breaking changes.',
       ],
-    },
-  },
-  {
-    name: 'Intuit Mailchimp App Redesign',
-    description:
-      'Staff Software Engineer. Led the technical implementation of the Mailchimp app redesign, directing 8 engineers across 21 releases to deliver 686 development tickets, 221 critical bug fixes, and 50+ new core UI components.',
-    tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
-    url: null,
-    slug: 'mailchimp-app-redesign',
-    detail: {
-      role: 'Led the technical implementation of the Intuit Mailchimp app redesign with a team of 8 engineers, starting February 2025.',
-      image: {
-        src: '/mailchimp-app-redesign.png',
-        alt: 'Mailchimp app redesign showing the new navigation and home screen',
-      },
-      approach: [
+      related: [
         {
-          heading: 'Ecosystem integration',
-          body: "Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
+          name: 'Intuit Mailchimp App Redesign',
+          tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
+          image: {
+            src: '/mailchimp-app-redesign.png',
+            alt: 'Mailchimp app redesign showing the new navigation and home screen',
+          },
+          approach: [
+            {
+              heading: 'Ecosystem integration',
+              body: "Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
+            },
+            {
+              heading: 'Release engineering',
+              body: 'Directed a team of 8 engineers across 21 releases and managed a pipeline of 686 development tickets. Structured triage kept the release cadence on schedule.',
+            },
+            {
+              heading: 'Component delivery',
+              body: 'Directed the design and delivery of 50+ new core UI components as part of the product redesign. Shipped alongside 221 critical bug fixes across all 21 releases.',
+            },
+          ],
+          outcome: [
+            '686 development tickets delivered across 21 releases.',
+            '221 critical bug fixes shipped across the rollout.',
+            '50+ new core UI components delivered as part of the product redesign.',
+            'Mailchimp UI architecture standardized with the Intuit global design system tooling.',
+          ],
         },
         {
-          heading: 'Release engineering',
-          body: 'Directed a team of 8 engineers across 21 releases and managed a pipeline of 686 development tickets. Structured triage kept the release cadence on schedule.',
+          name: 'Dark Mode',
+          tags: ['CSS Variables', 'Design Tokens', 'CSS Theming'],
+          approach: [
+            {
+              heading: 'Token package integration',
+              body: "Pulled in the Intuit Design System token package and mapped its global primitive tokens to Mailchimp's semantic CSS variable layer. This gave both light and dark values a single source of truth tied to the Intuit ecosystem.",
+            },
+            {
+              heading: 'CSS variable architecture',
+              body: 'Implemented runtime theme switching using CSS custom properties scoped to a data attribute on the root element. Component code required no changes to support dark mode. Theming is handled entirely at the token layer.',
+            },
+            {
+              heading: 'Surface migration',
+              body: "Audited Mailchimp's product surfaces for raw color values and migrated them to the semantic token layer as part of the rollout. This brought each surface into compliance with the new theming architecture.",
+            },
+          ],
+          outcome: [
+            'Dark mode shipped across Mailchimp product surfaces.',
+            'Zero component code changes required. Theme switching is handled at the CSS variable layer.',
+            "Mailchimp's token architecture aligned with the Intuit Design System token package.",
+            'Raw color values replaced with semantic tokens across migrated product surfaces.',
+          ],
         },
-        {
-          heading: 'Component delivery',
-          body: 'Directed the design and delivery of 50+ new core UI components as part of the product redesign. Shipped alongside 221 critical bug fixes across all 21 releases.',
-        },
-      ],
-      outcome: [
-        '686 development tickets delivered across 21 releases.',
-        '221 critical bug fixes shipped across the rollout.',
-        '50+ new core UI components delivered as part of the product redesign.',
-        'Mailchimp UI architecture standardized with the Intuit global design system tooling.',
       ],
     },
   },

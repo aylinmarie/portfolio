@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useMemo } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
@@ -11,21 +11,19 @@ export default function ProjectDetail() {
   const headingRef = useRef<HTMLHeadingElement>(null)
   const [activeId, setActiveId] = useState('approach-heading')
 
+  const relatedCount = project?.detail?.related?.length ?? 0
+  const tocIds = useMemo(
+    () => [
+      'approach-heading',
+      'outcome-heading',
+      ...Array.from({ length: relatedCount }, (_, i) => `related-${i}`),
+    ],
+    [relatedCount]
+  )
+
   useEffect(() => {
     headingRef.current?.focus()
   }, [])
-
-  if (!project || !project.detail) {
-    return <Navigate to="/" replace />
-  }
-
-  const { detail } = project
-
-  const tocIds = [
-    'approach-heading',
-    'outcome-heading',
-    ...(detail.related?.map((_, i) => `related-${i}`) ?? []),
-  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +39,13 @@ export default function ProjectDetail() {
       if (el) observer.observe(el)
     })
     return () => observer.disconnect()
-  }, [])
+  }, [tocIds])
+
+  if (!project || !project.detail) {
+    return <Navigate to="/" replace />
+  }
+
+  const { detail } = project
 
   return (
     <article className={styles.page} aria-labelledby="project-heading">

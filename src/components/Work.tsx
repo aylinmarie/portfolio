@@ -31,7 +31,7 @@ export default function Work() {
         className={styles.inner}
         variants={stagger()} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
       >
-        <motion.h2 id="work-heading" variants={fadeUp} className={styles.label}>01 / Experience</motion.h2>
+        <motion.h2 id="work-heading" variants={fadeUp} className={styles.label}>02 / Experience</motion.h2>
 
         <div className={styles.list}>
           {experience.map((job) => (

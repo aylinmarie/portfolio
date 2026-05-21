@@ -9,7 +9,7 @@ export default function Contact() {
         className={styles.inner}
         variants={stagger()} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
       >
-        <motion.span variants={fadeUp} className={styles.label}>05 / Contact</motion.span>
+        <motion.span variants={fadeUp} className={styles.label}>05 / Connect</motion.span>
 
         <motion.h2 id="contact-heading" variants={fadeUp} className={styles.heading}>
           Let's connect<span className={styles.dot}>.</span>

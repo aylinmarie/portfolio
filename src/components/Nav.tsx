@@ -4,11 +4,10 @@ import { useTheme } from '../hooks/useTheme'
 import styles from './Nav.module.css'
 
 const links = [
-  { label: 'Work', href: '#work' },
-  // { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
-  { label: 'Posts', href: '#posts' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'Experience', href: '/#work' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Connect', href: '/#contact' },
 ]
 
 function SunIcon() {
@@ -55,7 +54,7 @@ export default function Nav() {
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo} aria-label="Aylin Marie — Home">
+        <a href="/" className={styles.logo} aria-label="Aylin Marie — Home">
           <img src="/logo.webp" alt="" className={styles.logoImg} />
         </a>
 

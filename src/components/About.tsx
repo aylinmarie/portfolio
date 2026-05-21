@@ -20,7 +20,7 @@ export default function About() {
           id="about-heading"
           className={styles.label}
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-        >03 / About</motion.h2>
+        >01 / About</motion.h2>
 
         <motion.div
           className={styles.grid}

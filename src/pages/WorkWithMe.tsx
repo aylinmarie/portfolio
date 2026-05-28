@@ -50,9 +50,7 @@ export default function WorkWithMe() {
             take-homes, and behavioral conversations, formats that reflect how I
             actually think and build. Purely algorithmic screening isn't a fit
             for me because it doesn't reflect how I actually work or collaborate
-            with others. Neither is a culture that quickly burns out their
-            employees, though I do understand at times deadlines need to be met
-            quickly.
+            with others.
           </p>
         </motion.div>
 

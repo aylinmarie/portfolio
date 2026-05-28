@@ -42,7 +42,9 @@
   font-size: 17px;
   line-height: 1.75;
   color: var(--color-text-subtle);
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .rule {

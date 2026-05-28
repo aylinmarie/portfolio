@@ -55,22 +55,25 @@ export default function WorkWithMe() {
           </h1>
         </motion.header>
 
-        <motion.p variants={fadeUp} className={styles.intro}>
-          I thrive in environments where engineers have real ownership and the
-          work they ship actually matters. I'm drawn to growth-stage and larger
-          companies with a genuine community culture, teams where people invest
-          in each other, collaboration happens across functions, and diverse
-          perspectives are part of how decisions get made, not a checkbox. I
-          move fast and adapt easily when priorities shift or the roadmap
-          changes; that kind of ambiguity doesn't bother me, it's just how good
-          product work goes. When it comes to interviews, I do my best in
-          portfolio reviews, take-homes, and behavioral conversations, formats
-          that reflect how I actually think and build. Purely algorithmic
-          screening isn't a fit for me because it doesn't reflect how I actually
-          work or how I collaborate with others. Neither is a culture that
-          mistakes availability for commitment. Remote flexibility is a
-          requirement.
-        </motion.p>
+        <motion.div variants={fadeUp} className={styles.intro}>
+          <p>
+            I thrive in environments where engineers have real ownership and the
+            work they ship actually matters. I'm drawn to growth-stage and larger
+            companies with a genuine community culture, teams where people invest
+            in each other, collaboration happens across functions, and diverse
+            perspectives are part of how decisions get made, not a checkbox. I
+            move fast and adapt easily when priorities shift or the roadmap
+            changes; that kind of ambiguity doesn't bother me.
+          </p>
+          <p>
+            When it comes to interviews, I do my best in portfolio reviews,
+            take-homes, and behavioral conversations, formats that reflect how I
+            actually think and build. Purely algorithmic screening isn't a fit
+            for me because it doesn't reflect how I actually work or how I
+            collaborate with others. Neither is a culture that mistakes
+            availability for commitment.
+          </p>
+        </motion.div>
 
         <motion.hr variants={fadeUp} className={styles.rule} />
 

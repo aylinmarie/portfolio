@@ -86,24 +86,24 @@ export default function WorkWithMe() {
             <div className={styles.criteriaRow}>
               <dt className={styles.criteriaKey}>Role</dt>
               <dd className={styles.criteriaValue}>
-                Staff or principal frontend engineer
+                Staff Software Engineer
               </dd>
             </div>
             <div className={styles.criteriaRow}>
               <dt className={styles.criteriaKey}>Environments</dt>
               <dd className={styles.criteriaValue}>
-                Growth-stage or larger orgs
+                Large or mid-size orgs
               </dd>
             </div>
             <div className={styles.criteriaRow}>
               <dt className={styles.criteriaKey}>Focus areas</dt>
               <dd className={styles.criteriaValue}>
-                Design systems, frontend infrastructure, platform work
+                Design systems, frontend infrastructure, platform work, agentic systems
               </dd>
             </div>
             <div className={styles.criteriaRow}>
               <dt className={styles.criteriaKey}>Remote</dt>
-              <dd className={styles.criteriaValue}>Required</dd>
+              <dd className={styles.criteriaValue}>Hybrid / Remote Flexibility</dd>
             </div>
           </dl>
         </motion.section>
@@ -121,9 +121,9 @@ export default function WorkWithMe() {
           <p className={styles.body}>
             Portfolio reviews, take-homes, and behavioral conversations are the
             formats where I do my best work. They reflect how I actually think
-            and build. Processes that rely primarily on Leetcode-style screening
-            aren't a good fit, and I'll say so upfront rather than waste
-            either side's time.
+            and build, and how I work with teams. Processes that rely primarily
+            on Leetcode-style screening aren't a good fit, and I'd rather name
+            that early so we can both make an informed decision.
           </p>
         </motion.section>
 

@@ -8,7 +8,6 @@ const links = [
   { label: 'Experience', href: '/#work' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Connect', href: '/#contact' },
-  { label: 'Work with me', href: '/work-with-me' },
 ]
 
 function SunIcon() {

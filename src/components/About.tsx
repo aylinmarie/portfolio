@@ -71,7 +71,7 @@ export default function About() {
                   {also.map((item, i) => (
                     <li key={i} className={styles.alsoItem}>
                       <span className={styles.bullet} aria-hidden="true">—</span>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>

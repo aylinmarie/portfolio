@@ -2,26 +2,7 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
-import { projects } from '../data/projects'
 import styles from './WorkWithMe.module.css'
-
-const featured = [
-  {
-    project: projects.find((p) => p.slug === 'mailchimp-design-system')!,
-    note: 'Design system engineering at Intuit Mailchimp — component library, token architecture, and dark mode across all product surfaces.',
-    internal: true,
-  },
-  {
-    project: projects.find((p) => p.name === 'Knit Gauge Converter')!,
-    note: 'Full-stack web app with AI-powered yarn guidance via Claude and Ravelry API integration.',
-    internal: false,
-  },
-  {
-    project: projects.find((p) => p.name === 'This Portfolio')!,
-    note: 'Built with Vite, React, and a custom Vite plugin for Substack. Fully static, deployed on Vercel.',
-    internal: false,
-  },
-]
 
 export default function WorkWithMe() {
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -57,21 +38,21 @@ export default function WorkWithMe() {
 
         <motion.div variants={fadeUp} className={styles.intro}>
           <p>
-            I thrive in environments where engineers have real ownership and the
-            work they ship actually matters. I'm drawn to growth-stage and larger
-            companies with a genuine community culture, teams where people invest
-            in each other, collaboration happens across functions, and diverse
-            perspectives are part of how decisions get made, not a checkbox. I
-            move fast and adapt easily when priorities shift or the roadmap
-            changes; that kind of ambiguity doesn't bother me.
+            I thrive in environments where engineers have real ownership of their
+            work and the features they ship. I'm drawn to large/mid-size
+            established companies with a genuine community culture, teams where
+            people invest in each other, and diverse perspectives are part of how
+            decisions get made. I can move fast and adapt easily when priorities
+            shift or the roadmap changes.
           </p>
           <p>
             When it comes to interviews, I do my best in portfolio reviews,
             take-homes, and behavioral conversations, formats that reflect how I
             actually think and build. Purely algorithmic screening isn't a fit
-            for me because it doesn't reflect how I actually work or how I
-            collaborate with others. Neither is a culture that mistakes
-            availability for commitment.
+            for me because it doesn't reflect how I actually work or collaborate
+            with others. Neither is a culture that quickly burns out their
+            employees, though I do understand at times deadlines need to be met
+            quickly.
           </p>
         </motion.div>
 
@@ -128,49 +109,6 @@ export default function WorkWithMe() {
             on Leetcode-style screening aren't a good fit, and I'd rather name
             that early so we can both make an informed decision.
           </p>
-        </motion.section>
-
-        <motion.hr variants={fadeUp} className={styles.rule} />
-
-        <motion.section
-          variants={fadeUp}
-          aria-labelledby="my-work-heading"
-          className={styles.section}
-        >
-          <h2 id="my-work-heading" className={styles.sectionLabel}>
-            My work
-          </h2>
-          <ul className={styles.projectList}>
-            {featured.map(({ project, note, internal }) => (
-              <li key={project.name} className={styles.projectItem}>
-                {internal ? (
-                  <Link
-                    to={`/projects/${project.slug}`}
-                    className={styles.projectLink}
-                  >
-                    {project.name}
-                    <span className={styles.arrow} aria-hidden="true">
-                      →
-                    </span>
-                  </Link>
-                ) : (
-                  <a
-                    href={project.url!}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.projectLink}
-                  >
-                    {project.name}
-                    <span className={styles.arrow} aria-hidden="true">
-                      →
-                    </span>
-                    <span className="sr-only">(opens in new tab)</span>
-                  </a>
-                )}
-                <p className={styles.projectNote}>{note}</p>
-              </li>
-            ))}
-          </ul>
         </motion.section>
 
         <motion.hr variants={fadeUp} className={styles.rule} />

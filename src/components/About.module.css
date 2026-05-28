@@ -52,6 +52,13 @@
   color: var(--color-text);
 }
 
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
 .tools {
   display: flex;
   flex-direction: column;
@@ -92,9 +99,7 @@
   opacity: 0.65;
 }
 
-.also {
-  padding-top: 4px;
-}
+.also {}
 
 .alsoTitle {
   font-size: 11px;
@@ -133,6 +138,11 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .photo {

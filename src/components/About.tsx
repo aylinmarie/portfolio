@@ -11,7 +11,7 @@ const also: React.ReactNode[] = [
   'General Assembly Workshop Instructor',
   'Squarespace Circle Member',
   'Portfolio Consultant — 2017 A3C Creator Complex Conference',
-  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only"> (opens in new tab)</span></a> + recently picked up sewing</>,
+  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only">(opens in new tab)</span></a>{' '}+ recently picked up sewing</>,
   'Visited 30+ countries and counting',
 ]
 
@@ -49,31 +49,33 @@ export default function About() {
               </p>
             </div>
 
-            <div className={styles.tools}>
-              <h3 className={styles.toolsTitle}>What I work with</h3>
-              <ul className={styles.tagList} aria-label="Current tools">
-                {currentTools.map((tool) => (
-                  <li key={tool} className={styles.tag}>{tool}</li>
-                ))}
-              </ul>
-              <h3 className={styles.toolsTitle}>What I used to work with</h3>
-              <ul className={styles.tagList} aria-label="Past tools">
-                {pastTools.map((tool) => (
-                  <li key={tool} className={`${styles.tag} ${styles.tagMuted}`}>{tool}</li>
-                ))}
-              </ul>
-            </div>
+            <div className={styles.bottomGrid}>
+              <div className={styles.tools}>
+                <h3 className={styles.toolsTitle}>What I work with</h3>
+                <ul className={styles.tagList} aria-label="Current tools">
+                  {currentTools.map((tool) => (
+                    <li key={tool} className={styles.tag}>{tool}</li>
+                  ))}
+                </ul>
+                <h3 className={styles.toolsTitle}>What I used to work with</h3>
+                <ul className={styles.tagList} aria-label="Past tools">
+                  {pastTools.map((tool) => (
+                    <li key={tool} className={`${styles.tag} ${styles.tagMuted}`}>{tool}</li>
+                  ))}
+                </ul>
+              </div>
 
-            <div className={styles.also}>
-              <h3 className={styles.alsoTitle}>& Other Things</h3>
-              <ul className={styles.alsoList}>
-                {also.map((item, i) => (
-                  <li key={i} className={styles.alsoItem}>
-                    <span className={styles.bullet} aria-hidden="true">—</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <div className={styles.also}>
+                <h3 className={styles.alsoTitle}>& Other Things</h3>
+                <ul className={styles.alsoList}>
+                  {also.map((item, i) => (
+                    <li key={i} className={styles.alsoItem}>
+                      <span className={styles.bullet} aria-hidden="true">—</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         </motion.div>

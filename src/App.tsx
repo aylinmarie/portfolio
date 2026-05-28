@@ -10,6 +10,7 @@ import About from './components/About'
 import Posts from './components/Posts'
 import Contact from './components/Contact'
 import ProjectDetail from './pages/ProjectDetail'
+import WorkWithMe from './pages/WorkWithMe'
 
 function HomePage() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/work-with-me" element={<WorkWithMe />} />
         </Routes>
       </main>
       <Analytics />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import styles from './Work.module.css'
@@ -69,15 +70,19 @@ export default function Work() {
           ))}
         </div>
 
-        <motion.a
-          variants={fadeUp}
-          href="https://linkedin.com/in/aylinatkins"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.linkedIn}
-        >
-          Full history on LinkedIn →<span className="sr-only"> (opens in new tab)</span>
-        </motion.a>
+        <motion.div variants={fadeUp} className={styles.footer}>
+          <a
+            href="https://linkedin.com/in/aylinatkins"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.footerLink}
+          >
+            Full history on LinkedIn →<span className="sr-only"> (opens in new tab)</span>
+          </a>
+          <Link to="/work-with-me" className={styles.footerLink}>
+            Work with me →
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   )

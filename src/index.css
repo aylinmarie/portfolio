@@ -99,6 +99,11 @@ a {
   color: var(--color-accent);
   text-decoration: underline;
   text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--color-accent) 80%, black);
 }
 
 ul {

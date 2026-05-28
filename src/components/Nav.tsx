@@ -55,7 +55,7 @@ export default function Nav() {
     >
       <div className={styles.inner}>
         <a href="/" className={styles.logo} aria-label="Aylin Marie — Home">
-          <img src="/logo.webp" alt="" className={styles.logoImg} />
+          <img src="/favicon.png" alt="" className={styles.logoImg} />
         </a>
 
         <ul className={styles.links}>

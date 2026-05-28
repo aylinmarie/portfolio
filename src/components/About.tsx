@@ -3,12 +3,15 @@ import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import styles from './About.module.css'
 
+const currentTools = ['CSS Variables', 'React', 'Vite', 'Storybook', 'Theming', 'Figma', 'Github', 'Vercel']
+const pastTools    = ['Sass', 'Less', 'Angular']
+
 const also: React.ReactNode[] = [
   'Founder of OneYoungTraveler LLC',
   'General Assembly Workshop Instructor',
   'Squarespace Circle Member',
   'Portfolio Consultant — 2017 A3C Creator Complex Conference',
-  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only"> (opens in new tab)</span></a> + recently picked up sewing</>,
+  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only">(opens in new tab)</span></a>{' '}+ recently picked up sewing</>,
   'Visited 30+ countries and counting',
 ]
 
@@ -42,20 +45,37 @@ export default function About() {
                 As the landscape of development shifts, I'm now focused on the mechanics of velocity by building the tooling and AI-driven infrastructure that helps engineers ship UI faster without sacrificing quality or inclusive design.
               </p>
               <p>
-                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only">(opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Mailchimp. 
+                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only">(opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Mailchimp.
               </p>
             </div>
 
-            <div className={styles.also}>
-              <h3 className={styles.alsoTitle}>Also</h3>
-              <ul className={styles.alsoList}>
-                {also.map((item, i) => (
-                  <li key={i} className={styles.alsoItem}>
-                    <span className={styles.bullet} aria-hidden="true">—</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className={styles.bottomGrid}>
+              <div className={styles.tools}>
+                <h3 className={styles.toolsTitle}>What I work with</h3>
+                <ul className={styles.tagList} aria-label="Current tools">
+                  {currentTools.map((tool) => (
+                    <li key={tool} className={styles.tag}>{tool}</li>
+                  ))}
+                </ul>
+                <h3 className={styles.toolsTitle}>What I used to work with</h3>
+                <ul className={styles.tagList} aria-label="Past tools">
+                  {pastTools.map((tool) => (
+                    <li key={tool} className={`${styles.tag} ${styles.tagMuted}`}>{tool}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.also}>
+                <h3 className={styles.alsoTitle}>& Other Things</h3>
+                <ul className={styles.alsoList}>
+                  {also.map((item, i) => (
+                    <li key={i} className={styles.alsoItem}>
+                      <span className={styles.bullet} aria-hidden="true">—</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         </motion.div>

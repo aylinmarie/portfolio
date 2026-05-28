@@ -3,11 +3,12 @@ import { fadeUp, stagger } from '../lib/motion'
 import styles from './Work.module.css'
 
 type Role = { role: string; detail: string; period: string }
-type Job  = { company: string; period: string; roles: Role[] }
+type Job  = { company: string; url: string; period: string; roles: Role[] }
 
 const experience: Job[] = [
   {
     company: 'Intuit Mailchimp',
+    url: 'https://mailchimp.com/',
     period: '2019–Present',
     roles: [
       { role: 'Staff Software Engineer',  detail: 'Design Systems Engineering Tech Lead',       period: '2025–Present' },
@@ -17,6 +18,7 @@ const experience: Job[] = [
   },
   {
     company: 'Banyan',
+    url: 'https://www.banyancom.com/',
     period: '2017–2019',
     roles: [
       { role: 'Frontend Engineer', detail: 'Creative agency focused on social good', period: '2017–2019' },
@@ -37,7 +39,13 @@ export default function Work() {
           {experience.map((job) => (
             <motion.div key={job.company} variants={fadeUp} className={styles.item}>
               <div className={styles.left}>
-                <h3 className={styles.company}>{job.company}</h3>
+                <h3 className={styles.company}>
+                  <a href={job.url} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+                    {job.company}
+                    <span className={styles.companyArrow} aria-hidden="true">↗</span>
+                    <span className="sr-only"> (opens in new tab)</span>
+                  </a>
+                </h3>
 
                 {job.roles.length > 1 ? (
                   <div className={styles.roleTimeline}>

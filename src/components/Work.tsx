@@ -40,8 +40,10 @@ export default function Work() {
             <motion.div key={job.company} variants={fadeUp} className={styles.item}>
               <div className={styles.left}>
                 <h3 className={styles.company}>
-                  <a href={job.url} target="_blank" rel="noopener noreferrer">
-                    {job.company}<span className="sr-only"> (opens in new tab)</span>
+                  <a href={job.url} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+                    {job.company}
+                    <span className={styles.companyArrow} aria-hidden="true">↗</span>
+                    <span className="sr-only"> (opens in new tab)</span>
                   </a>
                 </h3>
 

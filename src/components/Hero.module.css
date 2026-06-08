@@ -36,6 +36,7 @@
 
 .dot {
   color: var(--color-accent);
+  display: inline-block;
 }
 
 .sub {

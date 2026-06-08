@@ -25,20 +25,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'Knit Gauge Converter',
-    description:
-      'Web app that helps knitters substitute yarns by estimating gauge adjustments and needle recommendations. Features Ravelry pattern import and AI-powered guidance via Claude.',
-    tags: ['Next.js', 'React', 'Supabase', 'Claude AI'],
-    url: 'https://knit-gauge-converter.vercel.app/',
-  },
-  {
-    name: 'Elegant Knit',
-    description:
-      'Personal inspiration board for saving favorite modern knit patterns, built with the Ravelry API.',
-    tags: ['React', 'Material UI', 'Ravelry API'],
-    url: 'https://elegant-knit.vercel.app/',
-  },
-  {
     name: 'Mailchimp Design System',
     description:
       "Engineering Tech Lead. Led design system engineering at Intuit Mailchimp, including the component library and token architecture, CSS variable dark mode, and the 2025 product redesign.",
@@ -122,6 +108,20 @@ export const projects: Project[] = [
         },
       ],
     },
+  },
+  {
+    name: 'Knit Gauge Converter',
+    description:
+      'Web app that helps knitters substitute yarns by estimating gauge adjustments and needle recommendations. Features Ravelry pattern import and AI-powered guidance via Claude.',
+    tags: ['Next.js', 'React', 'Supabase', 'Claude AI'],
+    url: 'https://knit-gauge-converter.vercel.app/',
+  },
+  {
+    name: 'Elegant Knit',
+    description:
+      'Personal inspiration board for saving favorite modern knit patterns, built with the Ravelry API.',
+    tags: ['React', 'Material UI', 'Ravelry API'],
+    url: 'https://elegant-knit.vercel.app/',
   },
   {
     name: 'This Portfolio',

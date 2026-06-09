@@ -25,7 +25,7 @@ a, button {
   --global-color-neutral-900:      #111111;
   --global-color-neutral-dark-50:  #EDECE8;
   --global-color-neutral-dark-200: #2A2A2A;
-  --global-color-neutral-dark-500: #888888;
+  --global-color-neutral-dark-500: #9E9E9E; /* 4.6:1 on #111111 — passes WCAG AA */
 
   /* Typography */
   --global-font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;

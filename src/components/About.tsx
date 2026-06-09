@@ -1,4 +1,4 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import styles from './About.module.css'
@@ -6,12 +6,12 @@ import styles from './About.module.css'
 const currentTools = ['CSS Variables', 'React', 'Vite', 'Storybook', 'Theming', 'Figma', 'Github', 'Vercel']
 const pastTools    = ['Sass', 'Less', 'Angular']
 
-const also: React.ReactNode[] = [
+const also: ReactNode[] = [
   'Founder of OneYoungTraveler LLC',
   'General Assembly Workshop Instructor',
   'Squarespace Circle Member',
   'Portfolio Consultant — 2017 A3C Creator Complex Conference',
-  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only">(opens in new tab)</span></a>{' '}+ recently picked up sewing</>,
+  <><a href="https://www.ravelry.com/people/aylinmarie" target="_blank" rel="noopener noreferrer">Amateur knitter<span className="sr-only"> (opens in new tab)</span></a>{' '}+ recently picked up sewing</>,
   'Visited 30+ countries and counting',
 ]
 
@@ -45,7 +45,7 @@ export default function About() {
                 As the landscape of development shifts, I'm now focused on the mechanics of velocity by building the tooling and AI-driven infrastructure that helps engineers ship UI faster without sacrificing quality or inclusive design.
               </p>
               <p>
-                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only">(opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Mailchimp.
+                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only"> (opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Mailchimp.
               </p>
             </div>
 

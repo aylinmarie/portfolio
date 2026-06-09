@@ -14,9 +14,9 @@ export default function Posts() {
       >
         <motion.h2 id="posts-heading" variants={fadeUp} className={styles.label}>04 / Posts</motion.h2>
 
-        <ul className={styles.list}>
+        <ul className={styles.list} aria-label="Blog posts">
           {posts.map((post) => (
-            <motion.li key={post.url} variants={fadeUp} className={styles.item}>
+            <motion.li key={post.url} variants={fadeUp}>
               <a
                 href={post.url}
                 target="_blank"

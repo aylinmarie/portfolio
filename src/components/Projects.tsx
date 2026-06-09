@@ -44,7 +44,7 @@ export default function Projects() {
                   {!project.url && project.slug && <span className={styles.arrow} aria-hidden="true">→</span>}
                 </div>
                 <p className={styles.description}>{project.description}</p>
-                <ul className={styles.tags}>
+                <ul className={styles.tags} aria-label="Tags">
                   {project.tags.map((tag) => (
                     <li key={tag} className={styles.tag}>{tag}</li>
                   ))}

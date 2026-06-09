@@ -37,7 +37,7 @@ export default function Contact() {
         </motion.div>
       </motion.div>
 
-      <div className={styles.footer}>
+      <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <span className={styles.footerName}>Aylin Marie © {new Date().getFullYear()}</span>
           <span className={styles.footerRole}>
@@ -48,7 +48,7 @@ export default function Contact() {
             <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">Vite<span className="sr-only"> (opens in new tab)</span></a>
           </span>
         </div>
-      </div>
+      </footer>
     </section>
   )
 }

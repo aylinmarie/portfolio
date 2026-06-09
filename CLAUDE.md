@@ -31,7 +31,7 @@ All animated sections use `whileInView` with `viewport={{ once: true, amount: 0.
 
 ## Design Tokens
 
-All styles use semantic CSS custom properties defined in `src/index.css`. Never use raw color values or primitives directly in components.
+All styles use semantic CSS custom properties defined in `src/tokens.css`. Global resets and base styles live in `src/global.css`. Never use raw color values or primitives directly in components.
 
 | Token | Purpose |
 |---|---|

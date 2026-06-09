@@ -66,16 +66,20 @@ export default function Nav() {
           ))}
         </ul>
 
-        <button
-          className={styles.themeToggle}
-          aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-          onClick={toggle}
-        >
-          {dark ? <MoonIcon /> : <SunIcon />}
-          <span className={!dark ? styles.themeActive : styles.themeInactive}>Light</span>
-          <span className={styles.themeDivider}>/</span>
-          <span className={dark ? styles.themeActive : styles.themeInactive}>Dark</span>
-        </button>
+        <label className={styles.themeToggle}>
+          <SunIcon />
+          <input
+            type="checkbox"
+            className={styles.themeInput}
+            checked={dark}
+            onChange={toggle}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+          />
+          <span className={styles.themeTrack}>
+            <span className={styles.themeThumb} />
+          </span>
+          <MoonIcon />
+        </label>
 
         <button
           className={styles.hamburger}

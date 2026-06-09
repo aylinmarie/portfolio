@@ -16,8 +16,35 @@
   --global-color-neutral-dark-200: #2A2A2A;
   --global-color-neutral-dark-500: #9E9E9E; /* 4.6:1 on #111111 — passes WCAG AA */
 
-  /* Typography */
+  /* Typography — font family */
   --global-font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Typography — fixed font sizes */
+  --global-font-size-11: 11px;
+  --global-font-size-12: 12px;
+  --global-font-size-13: 13px;
+  --global-font-size-14: 14px;
+  --global-font-size-15: 15px;
+  --global-font-size-16: 16px;
+  --global-font-size-18: 18px;
+  --global-font-size-20: 20px;
+
+  /* Typography — fluid font sizes */
+  --global-font-size-fluid-sm:  clamp(15px, 1.8vw, 18px);
+  --global-font-size-fluid-md:  clamp(16px, 1.8vw, 20px);
+  --global-font-size-fluid-lg:  clamp(22px, 3vw, 32px);
+  --global-font-size-fluid-xl:  clamp(32px, 5vw, 52px);
+  --global-font-size-fluid-2xl: clamp(32px, 4.5vw, 56px);
+  --global-font-size-fluid-3xl: clamp(48px, 8vw, 104px);
+  --global-font-size-fluid-4xl: clamp(56px, 9.5vw, 120px);
+
+  /* Typography — font weights */
+  --global-font-weight-regular:  400;
+  --global-font-weight-medium:   500;
+  --global-font-weight-semibold: 600;
+  --global-font-weight-bold:     700;
+  --global-font-weight-extrabold:800;
+  --global-font-weight-black:    900;
 }
 
 /* ================================================================
@@ -41,8 +68,53 @@
   /* Structural */
   --color-border:          var(--global-color-neutral-200);
 
-  /* Typography */
-  --font-family:           var(--global-font-family-sans);
+  /* Typography — font family */
+  --font-family:             var(--global-font-family-sans);
+
+  /* Typography — Display */
+  --font-size-display:       var(--global-font-size-fluid-4xl);
+  --font-weight-display:     var(--global-font-weight-black);
+
+  /* Typography — Headings */
+  --font-size-heading-1:     var(--global-font-size-fluid-3xl);
+  --font-weight-heading-1:   var(--global-font-weight-black);
+
+  --font-size-heading-2:     var(--global-font-size-fluid-2xl);
+  --font-weight-heading-2:   var(--global-font-weight-extrabold);
+
+  --font-size-heading-3:     var(--global-font-size-fluid-xl);
+  --font-weight-heading-3:   var(--global-font-weight-bold);
+
+  --font-size-heading-4:     var(--global-font-size-fluid-lg);
+  --font-weight-heading-4:   var(--global-font-weight-bold);
+
+  --font-size-heading-5:     var(--global-font-size-20);
+  --font-weight-heading-5:   var(--global-font-weight-bold);
+
+  --font-size-heading-6:     var(--global-font-size-18);
+  --font-weight-heading-6:   var(--global-font-weight-semibold);
+
+  /* Typography — Subtitle */
+  --font-size-subtitle:      var(--global-font-size-fluid-sm);
+  --font-weight-subtitle:    var(--global-font-weight-semibold);
+
+  /* Typography — Body */
+  --font-size-body-lg:       var(--global-font-size-fluid-md);
+  --font-size-body:          var(--global-font-size-16);
+  --font-size-body-sm:       var(--global-font-size-15);
+  --font-weight-body:        var(--global-font-weight-regular);
+
+  /* Typography — UI */
+  --font-size-caption:       var(--global-font-size-14);
+  --font-weight-caption:     var(--global-font-weight-semibold);
+
+  --font-size-caption-sm:    var(--global-font-size-13);
+
+  --font-size-label:         var(--global-font-size-12);
+  --font-weight-label:       var(--global-font-weight-medium);
+
+  --font-size-overline:      var(--global-font-size-11);
+  --font-weight-overline:    var(--global-font-weight-bold);
 }
 
 /* ================================================================

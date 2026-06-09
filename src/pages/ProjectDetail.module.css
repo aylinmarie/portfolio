@@ -17,8 +17,8 @@
 
 .back {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-caption);
   letter-spacing: 0.04em;
   color: var(--color-text-subtle);
   text-decoration: none;
@@ -40,8 +40,8 @@
 }
 
 .title {
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 700;
+  font-size: var(--font-size-heading-3);
+  font-weight: var(--font-weight-heading-3);
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: var(--color-text);
@@ -61,8 +61,8 @@
 }
 
 .tag {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-label);
   letter-spacing: 0.02em;
   color: var(--color-text);
   border: 1px solid var(--color-border);
@@ -71,8 +71,8 @@
 }
 
 .role {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
   line-height: 1.8;
   color: var(--color-text);
   margin-bottom: 64px;
@@ -97,8 +97,8 @@
 }
 
 .sectionLabel {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-overline);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -119,16 +119,16 @@
 }
 
 .approachHeading {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-overline);
   letter-spacing: -0.01em;
   color: var(--color-text);
   padding-top: 3px;
 }
 
 .approachBody {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
   line-height: 1.8;
   color: var(--color-text);
 }
@@ -143,8 +143,8 @@
 }
 
 .outcomeItem {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
   line-height: 1.8;
   color: var(--color-text);
   padding-left: 20px;
@@ -176,8 +176,8 @@
 }
 
 .relatedName {
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 700;
+  font-size: var(--font-size-heading-4);
+  font-weight: var(--font-weight-heading-4);
   letter-spacing: -0.02em;
   line-height: 1.15;
   color: var(--color-text);
@@ -197,8 +197,8 @@
 }
 
 .tocLabel {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-overline);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -216,8 +216,8 @@
 
 .tocLink {
   display: block;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-body);
   line-height: 1.5;
   color: var(--color-text-subtle);
   text-decoration: none;
@@ -232,7 +232,7 @@
 
 .tocLinkActive {
   color: var(--color-text);
-  font-weight: 600;
+  font-weight: var(--font-weight-caption);
   border-left-color: var(--color-accent);
 }
 

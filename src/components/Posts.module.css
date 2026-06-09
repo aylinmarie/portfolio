@@ -10,8 +10,8 @@
 
 .label {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-overline);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -42,8 +42,8 @@
 }
 
 .title {
-  font-size: clamp(15px, 1.8vw, 18px);
-  font-weight: 600;
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-subtitle);
   line-height: 1.4;
   letter-spacing: -0.01em;
 }
@@ -56,8 +56,8 @@
 }
 
 .date {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-body);
   color: var(--color-text-subtle);
   white-space: nowrap;
   transition: color 0.2s;
@@ -68,7 +68,7 @@
 }
 
 .arrow {
-  font-size: 14px;
+  font-size: var(--font-size-caption);
   color: var(--color-text-subtle);
   transition: color 0.2s, transform 0.2s;
   display: inline-block;
@@ -82,8 +82,8 @@
 .substackLink {
   display: inline-block;
   margin-top: 40px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-caption);
   color: var(--color-accent);
   border-bottom: 1px solid var(--color-accent);
   padding-bottom: 2px;

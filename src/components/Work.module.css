@@ -10,8 +10,8 @@
 
 .label {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-overline);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -35,8 +35,8 @@
 }
 
 .company {
-  font-size: clamp(32px, 4.5vw, 56px);
-  font-weight: 800;
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-heading-2);
   letter-spacing: -0.025em;
   line-height: 1;
   color: var(--color-text);
@@ -66,21 +66,21 @@
 }
 
 .role {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-caption);
   color: var(--color-text);
   margin-bottom: 4px;
 }
 
 .detail {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-body);
   color: var(--color-text-subtle);
 }
 
 .period {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-label);
   color: var(--color-text-subtle);
   white-space: nowrap;
   margin-left: 40px;
@@ -140,8 +140,8 @@
 
 .footerLink {
   display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-caption);
   color: var(--color-accent);
   border-bottom: 1px solid var(--color-accent);
   padding-bottom: 2px;

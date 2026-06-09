@@ -13,8 +13,8 @@
 }
 
 .eyebrow {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-overline);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -22,8 +22,8 @@
 }
 
 .heading {
-  font-size: clamp(56px, 9.5vw, 120px);
-  font-weight: 900;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-display);
   line-height: 0.93;
   letter-spacing: -0.03em;
   color: var(--color-text);
@@ -36,8 +36,8 @@
 }
 
 .sub {
-  font-size: clamp(16px, 1.8vw, 20px);
-  font-weight: 400;
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-body);
   line-height: 1.65;
   color: var(--color-text-subtle);
   max-width: 840px;
@@ -46,8 +46,8 @@
 
 .cta {
   display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-caption);
   color: var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 3px;

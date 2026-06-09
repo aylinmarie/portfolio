@@ -31,7 +31,9 @@ All animated sections use `whileInView` with `viewport={{ once: true, amount: 0.
 
 ## Design Tokens
 
-All styles use semantic CSS custom properties defined in `src/index.css`. Never use raw color values or primitives directly in components.
+All styles use semantic CSS custom properties defined in `src/tokens.css`. Global resets and base styles live in `src/global.css`. Never use raw color values, font sizes, or font weights directly in components — always use tokens.
+
+### Color
 
 | Token | Purpose |
 |---|---|
@@ -41,7 +43,28 @@ All styles use semantic CSS custom properties defined in `src/index.css`. Never 
 | `--color-text-subtle` | Secondary/muted text |
 | `--color-accent` | Interactive elements (orange) |
 | `--color-border` | Dividers |
-| `--font-family` | Inter, system-ui |
+
+### Typography
+
+| Token | Size | Weight | Usage |
+|---|---|---|---|
+| `--font-size-display` / `--font-weight-display` | fluid 56–120px | 900 | Hero heading |
+| `--font-size-heading-1` / `--font-weight-heading-1` | fluid 48–104px | 900 | Section display headings |
+| `--font-size-heading-2` / `--font-weight-heading-2` | fluid 32–56px | 800 | Company names |
+| `--font-size-heading-3` / `--font-weight-heading-3` | fluid 32–52px | 700 | Page titles |
+| `--font-size-heading-4` / `--font-weight-heading-4` | fluid 22–32px | 700 | Sub-section headings |
+| `--font-size-heading-5` / `--font-weight-heading-5` | 20px | 700 | Card titles |
+| `--font-size-heading-6` / `--font-weight-heading-6` | 18px | 600 | Small headings |
+| `--font-size-subtitle` / `--font-weight-subtitle` | fluid 15–18px | 600 | Post titles |
+| `--font-size-body-lg` | fluid 16–20px | — | Hero subtitle |
+| `--font-size-body` | 16px | — | Standard body |
+| `--font-size-body-sm` | 15px | — | Smaller body |
+| `--font-weight-body` | — | 400 | Body text weight |
+| `--font-size-caption` / `--font-weight-caption` | 14px | 600 | Nav, buttons, CTAs |
+| `--font-size-caption-sm` | 13px | — | Small captions, links |
+| `--font-size-label` / `--font-weight-label` | 12px | 500 | Meta, tags |
+| `--font-size-overline` / `--font-weight-overline` | 11px | 700 | Section labels |
+| `--font-family` | Inter, system-ui | — | Font stack |
 
 ## Accessibility Conventions
 

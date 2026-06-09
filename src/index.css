@@ -67,7 +67,7 @@ a, button {
 [data-theme="dark"] {
   --color-surface:     var(--global-color-neutral-900);
   --color-text:        var(--global-color-neutral-dark-50);
-  --color-text-subtle: var(--global-color-neutral-dark-500);
+  --color-text-subtle: #9E9E9E;
   --color-border:      var(--global-color-neutral-dark-200);
   --color-accent:      var(--global-color-orange-400);
 }

@@ -69,6 +69,7 @@
   cursor: pointer;
   flex-shrink: 0;
   color: var(--color-text-subtle);
+  min-height: 24px;
 }
 
 .themeToggle svg {
@@ -93,7 +94,7 @@
   position: relative;
   width: 40px;
   height: 22px;
-  background: var(--color-border);
+  background: var(--color-text-subtle);
   border-radius: 11px;
   transition: background 0.2s;
 }

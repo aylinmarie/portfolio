@@ -78,13 +78,15 @@ ul {
 /* ================================================================
    FOCUS INDICATOR  (WCAG 2.4.7, 2.4.11)
    Keyboard-only focus ring using the accent colour.
-   outline-offset keeps it clear of element borders.
+   scroll-margin-top ensures the fixed nav never covers a focused
+   element during keyboard navigation (WCAG 2.4.11).
    ================================================================ */
 
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 2px;
+  scroll-margin-top: 88px;
 }
 
 /* ================================================================

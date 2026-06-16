@@ -11,6 +11,12 @@ export default function WorkWithMe() {
     headingRef.current?.focus()
   }, [])
 
+  useEffect(() => {
+    const prev = document.title
+    document.title = 'Work with me — Aylin Marie'
+    return () => { document.title = prev }
+  }, [])
+
   return (
     <article className={styles.page} aria-labelledby="wwm-heading">
       <motion.div

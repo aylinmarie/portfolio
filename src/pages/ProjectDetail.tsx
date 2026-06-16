@@ -26,6 +26,13 @@ export default function ProjectDetail() {
   }, [])
 
   useEffect(() => {
+    if (!project) return
+    const prev = document.title
+    document.title = `${project.name} — Aylin Marie`
+    return () => { document.title = prev }
+  }, [project?.name])
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -161,7 +168,7 @@ export default function ProjectDetail() {
             <li>
               <a
                 href="#approach-heading"
-                aria-current={activeId === 'approach-heading' ? true : undefined}
+                aria-current={activeId === 'approach-heading' ? 'location' : undefined}
                 className={`${styles.tocLink} ${activeId === 'approach-heading' ? styles.tocLinkActive : ''}`}
               >
                 Approach
@@ -170,7 +177,7 @@ export default function ProjectDetail() {
             <li>
               <a
                 href="#outcome-heading"
-                aria-current={activeId === 'outcome-heading' ? true : undefined}
+                aria-current={activeId === 'outcome-heading' ? 'location' : undefined}
                 className={`${styles.tocLink} ${activeId === 'outcome-heading' ? styles.tocLinkActive : ''}`}
               >
                 Outcome
@@ -183,7 +190,7 @@ export default function ProjectDetail() {
                   <li key={i}>
                     <a
                       href={`#related-${i}`}
-                      aria-current={activeId === `related-${i}` ? true : undefined}
+                      aria-current={activeId === `related-${i}` ? 'location' : undefined}
                       className={`${styles.tocLink} ${activeId === `related-${i}` ? styles.tocLinkActive : ''}`}
                     >
                       {item.name}

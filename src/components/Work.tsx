@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import styles from './Work.module.css'
@@ -79,9 +79,9 @@ export default function Work() {
           >
             Full history on LinkedIn →<span className="sr-only"> (opens in new tab)</span>
           </a>
-          <Link to="/work-with-me" className={styles.footerLink}>
+          {/* <Link to="/work-with-me" className={styles.footerLink}>
             Work with me →
-          </Link>
+          </Link> */}
         </motion.div>
       </motion.div>
     </section>

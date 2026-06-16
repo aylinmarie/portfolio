@@ -30,7 +30,7 @@ export default function ProjectDetail() {
     const prev = document.title
     document.title = `${project.name} — Aylin Marie`
     return () => { document.title = prev }
-  }, [project?.name])
+  }, [project])
 
   useEffect(() => {
     const observer = new IntersectionObserver(

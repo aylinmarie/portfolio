@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import { projects } from '../data/projects'
+import ImageToggle from '../components/ImageToggle'
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail() {
@@ -130,16 +131,7 @@ export default function ProjectDetail() {
                         </ul>
                       </div>
 
-                      {item.images && (
-                        <div className={styles.imageGroup}>
-                          {item.images.map((img) => (
-                            <div key={img.src} className={styles.imageWrap}>
-                              <p className={styles.imageLabel}>{img.label}</p>
-                              <img src={img.src} alt={img.alt} className={styles.image} />
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      {item.images && <ImageToggle images={item.images} />}
 
                       {item.image && (
                         <div className={styles.imageWrap}>

@@ -9,6 +9,7 @@ export interface RelatedWork {
 export interface ProjectDetail {
   role: string
   image?: { src: string; alt: string }
+  demo?: 'token-typewriter'
   approach: { heading: string; body: string }[]
   outcome: string[]
   related?: RelatedWork[]
@@ -33,6 +34,7 @@ export const projects: Project[] = [
     slug: 'mailchimp-design-system',
     detail: {
       role: 'Engineering Tech Lead. Led the team that built the component library and token architecture used across all Mailchimp product surfaces.',
+      demo: 'token-typewriter',
       approach: [
         {
           heading: 'Token architecture',

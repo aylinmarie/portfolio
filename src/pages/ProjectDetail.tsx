@@ -78,7 +78,7 @@ export default function ProjectDetail() {
             {detail.role}
           </motion.p>
 
-          {project.slug === 'mailchimp-design-system' && (
+          {detail.demo === 'token-typewriter' && (
             <motion.div variants={fadeUp} className={styles.imageWrap}>
               <TokenTypewriter />
             </motion.div>

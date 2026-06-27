@@ -1,0 +1,94 @@
+.editor {
+  border-radius: 14px;
+  background: #1b2024;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  max-width: 600px;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #1e2326;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.tabBar {
+  background: #252b2f;
+  padding: 10px 16px;
+}
+
+.tab {
+  display: inline-block;
+  font-family: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+  font-size: var(--font-size-label);
+  color: #d6d6d6;
+  border-bottom: 2px solid #017e89;
+  padding-bottom: 8px;
+}
+
+.code {
+  padding: 24px 28px;
+  min-height: 180px;
+}
+
+.line {
+  font-family: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+  font-size: var(--font-size-body-sm);
+  line-height: 2;
+  white-space: pre;
+}
+
+.property {
+  color: #5dabff;
+}
+
+.value {
+  color: #fca354;
+}
+
+.unit {
+  color: #fca354;
+  opacity: 0.7;
+}
+
+.string {
+  color: #ff95d3;
+}
+
+.punctuation {
+  color: #9aa3ab;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #e7e4df;
+  margin-left: 2px;
+  vertical-align: -2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

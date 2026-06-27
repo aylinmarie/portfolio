@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import styles from './TokenTypewriter.module.css'
 
-type TokenKind = 'selector' | 'string' | 'property' | 'punctuation' | 'value'
+type TokenKind = 'string' | 'property' | 'punctuation' | 'value'
 
 interface Token {
   text: string
@@ -38,62 +37,27 @@ const LINES: Line[] = [
     ],
   },
   tokenLine('--color-action-standard', '#017E89'),
-  tokenLine('--color-action-standard-hover', '#006771'),
   tokenLine('--color-action-negative', '#B61A37'),
   tokenLine('--color-action-special-use', '#FFE01B'),
-  tokenLine('--color-action-passive', '#E2E9ED'),
   tokenLine('--color-code-keyword', '#D72792'),
   tokenLine('--color-code-string', '#00828D'),
   tokenLine('--color-code-number', '#C84F00'),
-  tokenLine('--color-code-boolean', '#6100C2'),
-  tokenLine('--color-code-attribute', '#00892E'),
-  tokenLine('--color-code-type', '#FCA354'),
-  tokenLine('--color-link-text', '#017E89'),
   tokenLine('--color-text-primary', '#21262A'),
-  tokenLine('--color-text-secondary', '#4C555B'),
-  tokenLine('--color-text-accent', '#017E89'),
   tokenLine('--color-ui-positive', '#00892E'),
-  tokenLine('--color-ui-new', '#D72792'),
-  tokenLine('--color-ui-info', '#7C00F6'),
   tokenLine('--color-ui-discover', '#2B77CC'),
-  tokenLine('--color-ui-beta', '#00B3C2'),
   { indent: 0, tokens: [{ text: '}', kind: 'punctuation' }] },
 ]
 
-function lineText(line: Line) {
-  return line.tokens.map((t) => t.text).join('')
+function renderLine(line: Line) {
+  return line.tokens.map((token, i) => (
+    <span key={i} className={styles[token.kind]}>
+      {token.kind === 'value' && line.swatch && (
+        <span className={styles.swatch} style={{ background: line.swatch }} aria-hidden="true" />
+      )}
+      {token.text}
+    </span>
+  ))
 }
-
-function renderTyped(line: Line, chars: number) {
-  const nodes: React.ReactNode[] = []
-  let remaining = chars
-  for (let i = 0; i < line.tokens.length; i++) {
-    const token = line.tokens[i]
-    if (remaining <= 0) break
-    const slice = token.text.slice(0, remaining)
-    if (slice.length > 0) {
-      const showSwatch = token.kind === 'value' && line.swatch
-      nodes.push(
-        <span key={i} className={styles[token.kind]}>
-          {showSwatch && (
-            <span
-              className={styles.swatch}
-              style={{ background: line.swatch }}
-              aria-hidden="true"
-            />
-          )}
-          {slice}
-        </span>
-      )
-    }
-    remaining -= token.text.length
-  }
-  return nodes
-}
-
-const TYPE_SPEED = 18
-const LINE_PAUSE = 220
-const LOOP_PAUSE = 1800
 
 function FileIcon() {
   return (
@@ -110,52 +74,11 @@ function FileIcon() {
 }
 
 export default function TokenTypewriter() {
-  const [lineIndex, setLineIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [reducedMotion, setReducedMotion] = useState(false)
-
-  useEffect(() => {
-    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReducedMotion(query.matches)
-    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)
-    query.addEventListener('change', handler)
-    return () => query.removeEventListener('change', handler)
-  }, [])
-
-  useEffect(() => {
-    if (reducedMotion) return
-
-    const currentLine = LINES[lineIndex]
-    const fullLength = lineText(currentLine).length
-
-    if (charIndex < fullLength) {
-      const id = setTimeout(() => setCharIndex((c) => c + 1), TYPE_SPEED)
-      return () => clearTimeout(id)
-    }
-
-    const isLastLine = lineIndex === LINES.length - 1
-    const id = setTimeout(
-      () => {
-        if (isLastLine) {
-          setLineIndex(0)
-          setCharIndex(0)
-        } else {
-          setLineIndex((l) => l + 1)
-          setCharIndex(0)
-        }
-      },
-      isLastLine ? LOOP_PAUSE : LINE_PAUSE
-    )
-    return () => clearTimeout(id)
-  }, [charIndex, lineIndex, reducedMotion])
-
-  const currentLineNumber = reducedMotion ? LINES.length : lineIndex + 1
-
   return (
     <div
       className={styles.editor}
       role="img"
-      aria-label="Animated demo of Mailchimp design tokens being typed into a code editor"
+      aria-label="Mailchimp design tokens shown in a code editor"
     >
       <div className={styles.titleBar}>
         <div className={styles.dots}>
@@ -176,21 +99,20 @@ export default function TokenTypewriter() {
         </span>
       </div>
       <div className={styles.code}>
-        {LINES.map((line, i) => {
-          const isPast = i < lineIndex || reducedMotion
-          const isCurrent = i === lineIndex && !reducedMotion
-          if (!isPast && !isCurrent) return null
-          const chars = isPast ? lineText(line).length : charIndex
-          return (
-            <div key={i} className={styles.line}>
-              <span className={styles.lineNumber}>{i + 1}</span>
-              <span className={styles.lineContent} style={{ paddingLeft: line.indent * 16 }}>
-                {renderTyped(line, chars)}
-                {isCurrent && <span className={styles.cursor} aria-hidden="true" />}
-              </span>
-            </div>
-          )
-        })}
+        {LINES.map((line, i) => (
+          <div key={i} className={styles.line}>
+            <span className={styles.lineNumber}>{i + 1}</span>
+            <span className={styles.lineContent} style={{ paddingLeft: line.indent * 16 }}>
+              {renderLine(line)}
+            </span>
+          </div>
+        ))}
+        <div className={styles.line}>
+          <span className={styles.lineNumber}>{LINES.length + 1}</span>
+          <span className={styles.lineContent}>
+            <span className={styles.cursor} aria-hidden="true" />
+          </span>
+        </div>
       </div>
       <div className={styles.statusBar}>
         <span className={styles.statusLeft}>
@@ -199,7 +121,7 @@ export default function TokenTypewriter() {
           <span className={styles.statusSep}>UTF-8</span>
           <span className={styles.statusSep}>Spaces: 2</span>
         </span>
-        <span className={styles.statusRight}>Ln {currentLineNumber}, Col 1</span>
+        <span className={styles.statusRight}>Ln {LINES.length + 1}, Col 1</span>
       </div>
     </div>
   )

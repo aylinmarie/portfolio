@@ -79,7 +79,7 @@ export default function ProjectDetail() {
           </motion.p>
 
           {detail.demo === 'token-typewriter' && (
-            <motion.div variants={fadeUp} className={styles.imageWrap}>
+            <motion.div variants={fadeUp} className={styles.demoWrap}>
               <TokenTypewriter />
             </motion.div>
           )}

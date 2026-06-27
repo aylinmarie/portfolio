@@ -130,6 +130,17 @@ export default function ProjectDetail() {
                         </ul>
                       </div>
 
+                      {item.images && (
+                        <div className={styles.imageStack}>
+                          {item.images.map((img) => (
+                            <div key={img.src} className={styles.imageWrap}>
+                              <p className={styles.imageLabel}>{img.label}</p>
+                              <img src={img.src} alt={img.alt} className={styles.image} />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
                       {item.image && (
                         <div className={styles.imageWrap}>
                           <img src={item.image.src} alt={item.image.alt} className={styles.image} />

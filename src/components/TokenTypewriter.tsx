@@ -124,8 +124,8 @@ export default function TokenTypewriter() {
         {LINES.map((line, i) => {
           const isPast = i < lineIndex || reducedMotion
           const isCurrent = i === lineIndex && !reducedMotion
-          const chars = isPast ? lineText(line).length : isCurrent ? charIndex : 0
           if (!isPast && !isCurrent) return null
+          const chars = isPast ? lineText(line).length : charIndex
           return (
             <div key={i} className={styles.line}>
               {renderTyped(line, chars)}

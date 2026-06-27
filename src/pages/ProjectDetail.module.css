@@ -83,6 +83,10 @@
   border: 1px solid var(--color-border);
 }
 
+.demoWrap {
+  margin-bottom: 64px;
+}
+
 .imageStack {
   display: flex;
   flex-direction: column;

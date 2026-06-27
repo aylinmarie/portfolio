@@ -1,0 +1,175 @@
+.editor {
+  border-radius: 10px;
+  background: #1b1f23;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  max-width: 640px;
+  font-family: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+}
+
+.titleBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background: #1b1f23;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.title {
+  position: absolute;
+  inset: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-label);
+  color: #8a9097;
+}
+
+.tabBar {
+  display: flex;
+  background: #15181b;
+  border-bottom: 1px solid #2a2f34;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: var(--font-size-label);
+  color: #6e7480;
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: #d6d6d6;
+  background: #1b1f23;
+  border-bottom-color: #017e89;
+}
+
+.fileIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.code {
+  padding: 16px 0;
+  overflow-x: auto;
+}
+
+.line {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.lineNumber {
+  flex: 0 0 auto;
+  width: 32px;
+  text-align: right;
+  margin-right: 16px;
+  color: #4c525a;
+  user-select: none;
+}
+
+.lineContent {
+  flex: 1 1 auto;
+}
+
+.string {
+  color: #fca354;
+}
+
+.property {
+  color: #5dabff;
+}
+
+.value {
+  display: inline-flex;
+  align-items: center;
+  color: #fca354;
+}
+
+.swatch {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.punctuation {
+  color: #9aa3ab;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #e7e4df;
+  margin-left: 2px;
+  vertical-align: -2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #15181b;
+  font-size: var(--font-size-label);
+  color: #6e7480;
+}
+
+.statusLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #017e89;
+}
+
+.statusSep {
+  border-left: 1px solid #2a2f34;
+  padding-left: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '../lib/motion'
 import { projects } from '../data/projects'
+import TokenTypewriter from '../components/TokenTypewriter'
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail() {
@@ -76,6 +77,12 @@ export default function ProjectDetail() {
           <motion.p variants={fadeUp} className={styles.role}>
             {detail.role}
           </motion.p>
+
+          {detail.demo === 'token-typewriter' && (
+            <motion.div variants={fadeUp} className={styles.demoWrap}>
+              <TokenTypewriter />
+            </motion.div>
+          )}
 
           {detail.image && (
             <motion.div variants={fadeUp} className={styles.imageWrap}>

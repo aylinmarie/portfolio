@@ -29,10 +29,13 @@
 
 .title {
   position: absolute;
-  inset: 0;
+  inset: 0 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: var(--font-size-label);
   color: #8a9097;
 }
@@ -66,10 +69,13 @@
 
 .code {
   padding: 16px 0;
+  overflow-x: auto;
 }
 
 .line {
   display: flex;
+  width: max-content;
+  min-width: 100%;
   font-size: var(--font-size-body-sm);
   line-height: 1.7;
   white-space: pre;

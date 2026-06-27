@@ -2,6 +2,7 @@ export interface RelatedWork {
   name: string
   tags: string[]
   image?: { src: string; alt: string }
+  images?: { src: string; alt: string; label: string }[]
   approach: { heading: string; body: string }[]
   outcome: string[]
 }
@@ -59,10 +60,18 @@ export const projects: Project[] = [
         {
           name: 'Intuit Mailchimp App Redesign',
           tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
-          image: {
-            src: '/mailchimp-app-redesign.png',
-            alt: 'Mailchimp app redesign showing the new navigation and home screen',
-          },
+          images: [
+            {
+              src: '/mailchimp-email-report-mockup.png',
+              alt: 'Mailchimp email report screen before the redesign',
+              label: 'Before',
+            },
+            {
+              src: '/mailchimp-browser-mockup.png',
+              alt: 'Mailchimp home screen after the redesign',
+              label: 'After',
+            },
+          ],
           approach: [
             {
               heading: 'Ecosystem integration',

@@ -51,25 +51,6 @@
   outline: none;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tag {
-  font-size: var(--font-size-label);
-  font-weight: var(--font-weight-label);
-  letter-spacing: 0.02em;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  padding: 4px 12px;
-  border-radius: 2px;
-}
-
 .role {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-body);
@@ -185,6 +166,7 @@
 .relatedList {
   display: flex;
   flex-direction: column;
+  gap: 56px;
 }
 
 .relatedItem {
@@ -205,12 +187,6 @@
   letter-spacing: -0.02em;
   line-height: 1.15;
   color: var(--color-text);
-}
-
-.relatedRule {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 56px 0;
 }
 
 /* ── Table of contents ── */

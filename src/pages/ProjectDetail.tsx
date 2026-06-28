@@ -84,6 +84,17 @@ export default function ProjectDetail() {
             </motion.div>
           )}
 
+          {detail.images && (
+            <motion.div variants={fadeUp} className={styles.imageStack}>
+              {detail.images.map((img) => (
+                <div key={img.src} className={styles.imageWrap}>
+                  <p className={styles.imageLabel}>{img.label}</p>
+                  <img src={img.src} alt={img.alt} className={styles.image} />
+                </div>
+              ))}
+            </motion.div>
+          )}
+
           {detail.image && (
             <motion.div variants={fadeUp} className={styles.imageWrap}>
               <img
@@ -108,8 +119,6 @@ export default function ProjectDetail() {
             </div>
           </motion.section>
 
-          <motion.hr variants={fadeUp} className={styles.rule} />
-
           <motion.section variants={fadeUp} aria-labelledby="outcome-heading">
             <h2 id="outcome-heading" className={styles.sectionLabel}>Outcome</h2>
             <ul className={styles.outcomeList}>
@@ -120,63 +129,50 @@ export default function ProjectDetail() {
           </motion.section>
 
           {detail.related && detail.related.length > 0 && (
-            <>
-              <motion.hr variants={fadeUp} className={styles.rule} style={{ marginTop: 64 }} />
+            <motion.section variants={fadeUp} aria-labelledby="related-heading">
+              <h2 id="related-heading" className={styles.sectionLabel}>Related work</h2>
+              <div className={styles.relatedList}>
+                {detail.related.map((item, i) => (
+                  <div key={i} className={styles.relatedItem}>
+                    <div className={styles.relatedHeader}>
+                      <h3 id={`related-${i}`} className={styles.relatedName}>{item.name}</h3>
+                    </div>
 
-              <motion.section variants={fadeUp} aria-labelledby="related-heading">
-                <h2 id="related-heading" className={styles.sectionLabel}>Related work</h2>
-                <div className={styles.relatedList}>
-                  {detail.related.map((item, i) => (
-                    <div key={i} className={styles.relatedItem}>
-                      <div className={styles.relatedHeader}>
-                        <h3 id={`related-${i}`} className={styles.relatedName}>{item.name}</h3>
-                        <ul className={styles.tags} aria-label="Technologies">
-                          {item.tags.map((tag) => (
-                            <li key={tag} className={styles.tag}>{tag}</li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {item.images && (
-                        <div className={styles.imageStack}>
-                          {item.images.map((img) => (
-                            <div key={img.src} className={styles.imageWrap}>
-                              <p className={styles.imageLabel}>{img.label}</p>
-                              <img src={img.src} alt={img.alt} className={styles.image} />
-                            </div>
-                          ))}
-                        </div>
-                      )}
-
-                      {item.image && (
-                        <div className={styles.imageWrap}>
-                          <img src={item.image.src} alt={item.image.alt} className={styles.image} />
-                        </div>
-                      )}
-
-                      <div className={styles.approachGrid}>
-                        {item.approach.map((block, j) => (
-                          <div key={j} className={styles.approachBlock}>
-                            <h4 className={styles.approachHeading}>{block.heading}</h4>
-                            <p className={styles.approachBody}>{block.body}</p>
+                    {item.images && (
+                      <div className={styles.imageStack}>
+                        {item.images.map((img) => (
+                          <div key={img.src} className={styles.imageWrap}>
+                            <p className={styles.imageLabel}>{img.label}</p>
+                            <img src={img.src} alt={img.alt} className={styles.image} />
                           </div>
                         ))}
                       </div>
+                    )}
 
-                      <ul className={styles.outcomeList}>
-                        {item.outcome.map((o, j) => (
-                          <li key={j} className={styles.outcomeItem}>{o}</li>
-                        ))}
-                      </ul>
+                    {item.image && (
+                      <div className={styles.imageWrap}>
+                        <img src={item.image.src} alt={item.image.alt} className={styles.image} />
+                      </div>
+                    )}
 
-                      {i < detail.related!.length - 1 && (
-                        <hr className={styles.relatedRule} />
-                      )}
+                    <div className={styles.approachGrid}>
+                      {item.approach.map((block, j) => (
+                        <div key={j} className={styles.approachBlock}>
+                          <h4 className={styles.approachHeading}>{block.heading}</h4>
+                          <p className={styles.approachBody}>{block.body}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </motion.section>
-            </>
+
+                    <ul className={styles.outcomeList}>
+                      {item.outcome.map((o, j) => (
+                        <li key={j} className={styles.outcomeItem}>{o}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
           )}
         </motion.div>
 

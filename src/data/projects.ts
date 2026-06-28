@@ -1,6 +1,5 @@
 export interface RelatedWork {
   name: string
-  tags: string[]
   image?: { src: string; alt: string }
   images?: { src: string; alt: string; label: string }[]
   approach: { heading: string; body: string }[]
@@ -10,6 +9,7 @@ export interface RelatedWork {
 export interface ProjectDetail {
   role: string
   image?: { src: string; alt: string }
+  images?: { src: string; alt: string; label: string }[]
   demo?: 'token-typewriter'
   approach: { heading: string; body: string }[]
   outcome: string[]
@@ -58,44 +58,7 @@ export const projects: Project[] = [
       ],
       related: [
         {
-          name: 'Intuit Mailchimp App Redesign',
-          tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
-          images: [
-            {
-              src: '/mailchimp-email-report-mockup.png',
-              alt: 'Mailchimp email report screen before the redesign',
-              label: 'Before',
-            },
-            {
-              src: '/mailchimp-browser-mockup.png',
-              alt: 'Mailchimp home screen after the redesign',
-              label: 'After',
-            },
-          ],
-          approach: [
-            {
-              heading: 'Ecosystem integration',
-              body: "Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
-            },
-            {
-              heading: 'Release engineering',
-              body: 'Directed a team of 8 engineers across 21 releases and managed a pipeline of 686 development tickets. Structured triage kept the release cadence on schedule.',
-            },
-            {
-              heading: 'Component delivery',
-              body: 'Directed the design and delivery of 50+ new core UI components as part of the product redesign. Shipped alongside 221 critical bug fixes across all 21 releases.',
-            },
-          ],
-          outcome: [
-            '686 development tickets delivered across 21 releases.',
-            '221 critical bug fixes shipped across the rollout.',
-            '50+ new core UI components delivered as part of the product redesign.',
-            'Mailchimp UI architecture standardized with the Intuit global design system tooling.',
-          ],
-        },
-        {
           name: 'Dark Mode',
-          tags: ['CSS Variables', 'Design Tokens', 'CSS Theming'],
           approach: [
             {
               heading: 'Token package integration',
@@ -121,11 +84,54 @@ export const projects: Project[] = [
     },
   },
   {
+    name: 'Intuit Mailchimp App Redesign',
+    description:
+      "Engineering Tech Lead. Directed Mailchimp's 2025 product redesign, leading a team of 8 engineers across 21 releases to align Mailchimp's UI architecture with the Intuit global ecosystem.",
+    tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
+    url: null,
+    slug: 'mailchimp-app-redesign',
+    detail: {
+      role: "Engineering Tech Lead. Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem as part of the 2025 product redesign.",
+      images: [
+        {
+          src: '/mailchimp-email-report-mockup.png',
+          alt: 'Mailchimp email report screen before the redesign',
+          label: 'Before',
+        },
+        {
+          src: '/mailchimp-browser-mockup.png',
+          alt: 'Mailchimp home screen after the redesign',
+          label: 'After',
+        },
+      ],
+      approach: [
+        {
+          heading: 'Ecosystem integration',
+          body: "Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
+        },
+        {
+          heading: 'Release engineering',
+          body: 'Directed a team of 8 engineers across 21 releases and managed a pipeline of 686 development tickets. Structured triage kept the release cadence on schedule.',
+        },
+        {
+          heading: 'Component delivery',
+          body: 'Directed the design and delivery of 50+ new core UI components as part of the product redesign. Shipped alongside 221 critical bug fixes across all 21 releases.',
+        },
+      ],
+      outcome: [
+        '686 development tickets delivered across 21 releases.',
+        '221 critical bug fixes shipped across the rollout.',
+        '50+ new core UI components delivered as part of the product redesign.',
+        'Mailchimp UI architecture standardized with the Intuit global design system tooling.',
+      ],
+    },
+  },
+  {
     name: 'Knit Gauge Converter',
     description:
       'Web app that helps knitters substitute yarns by estimating gauge adjustments and needle recommendations. Features Ravelry pattern import and AI-powered guidance via Claude.',
     tags: ['Next.js', 'React', 'Supabase', 'Claude AI'],
-    url: 'https://knit-gauge-converter.vercel.app/',
+    url: 'https://github.com/aylinmarie/knit-gauge-converter',
   },
   {
     name: 'Elegant Knit',

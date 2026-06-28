@@ -27,7 +27,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'Mailchimp Design System',
+    name: 'Intuit Mailchimp Design System',
     description:
       "Engineering Tech Lead. Led design system engineering at Intuit Mailchimp, including the component library and token architecture, CSS variable dark mode, and the 2025 product redesign.",
     tags: ['React', 'TypeScript', 'CSS Variables', 'Design Tokens', 'Storybook', 'a11y', 'Technical Leadership'],

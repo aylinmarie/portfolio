@@ -34,7 +34,7 @@ export const projects: Project[] = [
     url: null,
     slug: 'mailchimp-design-system',
     detail: {
-      role: 'Engineering Tech Lead. Led the team that built the component library and token architecture used across all Mailchimp product surfaces.',
+      role: 'Engineering Tech Lead. Led the team that built the component library and token architecture used across all Intuit Mailchimp product surfaces.',
       demo: 'token-typewriter',
       approach: [
         {
@@ -51,7 +51,7 @@ export const projects: Project[] = [
         },
       ],
       outcome: [
-        'Adopted by all new Mailchimp product surfaces as the baseline UI foundation.',
+        'Adopted by all new Intuit Mailchimp product surfaces as the baseline UI foundation.',
         'Reduced design inconsistency bugs reported across product teams after rollout.',
         'Multiple teams shipped accessible UI without additional accessibility review cycles.',
         'Cross-functional contribution model brought engineers from 4+ teams with zero breaking changes.',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
           approach: [
             {
               heading: 'Token package integration',
-              body: "Pulled in the Intuit Design System token package and mapped its global primitive tokens to Mailchimp's semantic CSS variable layer. This gave both light and dark values a single source of truth tied to the Intuit ecosystem.",
+              body: "Pulled in the Intuit Design System token package and mapped its global primitive tokens to Intuit Mailchimp's semantic CSS variable layer. This gave both light and dark values a single source of truth tied to the Intuit ecosystem.",
             },
             {
               heading: 'CSS variable architecture',
@@ -70,13 +70,13 @@ export const projects: Project[] = [
             },
             {
               heading: 'Surface migration',
-              body: "Audited Mailchimp's product surfaces for raw color values and migrated them to the semantic token layer as part of the rollout. This brought each surface into compliance with the new theming architecture.",
+              body: "Audited Intuit Mailchimp's product surfaces for raw color values and migrated them to the semantic token layer as part of the rollout. This brought each surface into compliance with the new theming architecture.",
             },
           ],
           outcome: [
-            'Dark mode shipped across Mailchimp product surfaces.',
+            'Dark mode shipped across Intuit Mailchimp product surfaces.',
             'Zero component code changes required. Theme switching is handled at the CSS variable layer.',
-            "Mailchimp's token architecture aligned with the Intuit Design System token package.",
+            "Intuit Mailchimp's token architecture aligned with the Intuit Design System token package.",
             'Raw color values replaced with semantic tokens across migrated product surfaces.',
           ],
         },
@@ -86,28 +86,28 @@ export const projects: Project[] = [
   {
     name: 'Intuit Mailchimp App Redesign',
     description:
-      "Engineering Tech Lead. Directed Mailchimp's 2025 product redesign, leading a team of 8 engineers across 21 releases to align Mailchimp's UI architecture with the Intuit global ecosystem.",
+      "Engineering Tech Lead. Directed Intuit Mailchimp's 2025 product redesign, leading a team of 8 engineers across 21 releases to align Intuit Mailchimp's UI architecture with the Intuit global ecosystem.",
     tags: ['React', 'TypeScript', 'UI Components', 'CSS Theming', 'Technical Leadership'],
     url: null,
     slug: 'mailchimp-app-redesign',
     detail: {
-      role: "Engineering Tech Lead. Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem as part of the 2025 product redesign.",
+      role: "Engineering Tech Lead. Led the strategic alignment of Intuit Mailchimp's UI architecture with the Intuit global ecosystem as part of the 2025 product redesign.",
       images: [
         {
           src: '/mailchimp-email-report-mockup.png',
-          alt: 'Mailchimp email report screen before the redesign',
+          alt: 'Intuit Mailchimp email report screen before the redesign',
           label: 'Before',
         },
         {
           src: '/mailchimp-browser-mockup.png',
-          alt: 'Mailchimp home screen after the redesign',
+          alt: 'Intuit Mailchimp home screen after the redesign',
           label: 'After',
         },
       ],
       approach: [
         {
           heading: 'Ecosystem integration',
-          body: "Led the strategic alignment of Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
+          body: "Led the strategic alignment of Intuit Mailchimp's UI architecture with the Intuit global ecosystem. Standardized iconography and design tokens for cross-platform consistency and shared library interoperability across Intuit products.",
         },
         {
           heading: 'Release engineering',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
         '686 development tickets delivered across 21 releases.',
         '221 critical bug fixes shipped across the rollout.',
         '50+ new core UI components delivered as part of the product redesign.',
-        'Mailchimp UI architecture standardized with the Intuit global design system tooling.',
+        'Intuit Mailchimp UI architecture standardized with the Intuit global design system tooling.',
       ],
     },
   },

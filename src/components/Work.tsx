@@ -8,11 +8,19 @@ type Job  = { company: string; url: string; period: string; roles: Role[] }
 
 const experience: Job[] = [
   {
+    company: 'Intuit QuickBooks',
+    url: 'https://quickbooks.intuit.com/',
+    period: '2026–Present',
+    roles: [
+      { role: 'Staff Software Engineer', detail: 'Design Systems Foundations Team', period: '2026–Present' },
+    ],
+  },
+  {
     company: 'Intuit Mailchimp',
     url: 'https://mailchimp.com/',
-    period: '2019–Present',
+    period: '2019–2026',
     roles: [
-      { role: 'Staff Software Engineer',  detail: 'Design Systems Engineering Tech Lead',       period: '2025–Present' },
+      { role: 'Staff Software Engineer',  detail: 'Design Systems Engineering Tech Lead',       period: '2025–2026' },
       { role: 'Senior Software Engineer', detail: 'Experience Platform Team + Design Systems',   period: '2020–2025'    },
       { role: 'UX Engineer',              detail: 'Design Systems',                              period: '2019–2020'    },
     ],

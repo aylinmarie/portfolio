@@ -78,7 +78,7 @@ export default function TokenTypewriter() {
     <div
       className={styles.editor}
       role="img"
-      aria-label="Mailchimp design tokens shown in a code editor"
+      aria-label="Intuit Mailchimp design tokens shown in a code editor"
     >
       <div className={styles.titleBar}>
         <div className={styles.dots}>
@@ -86,7 +86,7 @@ export default function TokenTypewriter() {
             <span key={color} className={styles.dot} style={{ background: color }} aria-hidden="true" />
           ))}
         </div>
-        <span className={styles.title}>mailchimp — tokens.css</span>
+        <span className={styles.title}>intuit-mailchimp — tokens.css</span>
       </div>
       <div className={styles.tabBar}>
         <span className={`${styles.tab} ${styles.tabActive}`}>

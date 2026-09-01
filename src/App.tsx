@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { MotionConfig } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
 import Nav from './components/Nav'
@@ -10,6 +10,7 @@ import About from './components/About'
 import Posts from './components/Posts'
 import Contact from './components/Contact'
 import ProjectDetail from './pages/ProjectDetail'
+import Links from './pages/Links'
 // import WorkWithMe from './pages/WorkWithMe'
 
 function HomePage() {
@@ -25,19 +26,31 @@ function HomePage() {
   )
 }
 
-export default function App() {
+function AppShell() {
+  const { pathname } = useLocation()
+  const isLinksPage = pathname === '/links'
+
   return (
-    <MotionConfig reducedMotion="user">
+    <>
       <ScrollToTop />
-      <Nav />
+      {!isLinksPage && <Nav />}
       <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/links" element={<Links />} />
           {/* <Route path="/work-with-me" element={<WorkWithMe />} /> */}
         </Routes>
       </main>
       <Analytics />
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <MotionConfig reducedMotion="user">
+      <AppShell />
     </MotionConfig>
   )
 }

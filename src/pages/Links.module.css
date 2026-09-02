@@ -93,13 +93,11 @@
   font-weight: var(--font-weight-heading-4);
   letter-spacing: -0.02em;
   color: var(--color-text);
-  margin-bottom: 6px;
+  margin-bottom: 40px;
 }
 
-.tagline {
-  font-size: var(--font-size-body-sm);
-  color: var(--color-text-subtle);
-  margin-bottom: 40px;
+.dot {
+  color: var(--color-accent);
 }
 
 .linkList {
@@ -136,20 +134,6 @@
 .linkDetail {
   font-size: var(--font-size-caption-sm);
   color: var(--color-text-subtle);
-}
-
-.back {
-  margin-top: 40px;
-  font-size: var(--font-size-label);
-  font-weight: var(--font-weight-caption);
-  letter-spacing: 0.04em;
-  color: var(--color-text-subtle);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.back:hover {
-  color: var(--color-accent);
 }
 
 @media (max-width: 480px) {

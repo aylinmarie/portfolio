@@ -7,8 +7,13 @@ import styles from './Links.module.css'
 const links = [
   {
     label: 'Portfolio',
-    detail: 'AYLINmarie.co',
+    detail: 'aylinmarie.co',
     href: 'https://aylinmarie.co',
+  },
+  {
+    label: 'Substack',
+    detail: 'Essays & writing',
+    href: 'https://aylinmarie.substack.com',
   },
   {
     label: 'Digital Garden',
@@ -86,12 +91,8 @@ export default function Links() {
         />
 
         <motion.h1 variants={fadeUp} className={styles.name}>
-          Aylin Marie
+          Aylin<span className={styles.dot}>.</span>
         </motion.h1>
-
-        <motion.p variants={fadeUp} className={styles.tagline}>
-          Staff Software Engineer
-        </motion.p>
 
         <motion.nav variants={fadeUp} aria-label="Links" className={styles.linkList}>
           {links.map(({ label, detail, href }) => (
@@ -108,10 +109,6 @@ export default function Links() {
             </a>
           ))}
         </motion.nav>
-
-        <motion.a variants={fadeUp} href="/" className={styles.back}>
-          Full portfolio &rarr;
-        </motion.a>
       </motion.div>
     </div>
   )

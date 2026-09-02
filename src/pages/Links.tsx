@@ -18,7 +18,7 @@ const links = [
   {
     label: 'Fable',
     detail: 'What I’m reading',
-    href: 'https://fable.co/fabler/aylin-atkins-153638976777?referralID=pHFNIRgAeK',
+    href: 'https://fable.co/fabler/aylin-atkins-153638976777',
   },
 ]
 

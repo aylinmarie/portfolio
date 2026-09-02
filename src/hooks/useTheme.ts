@@ -9,8 +9,23 @@ export function useTheme() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
-    localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
 
-  return { dark, toggle: () => setDark(d => !d) }
+  useEffect(() => {
+    if (localStorage.getItem('theme')) return
+    const query = window.matchMedia('(prefers-color-scheme: dark)')
+    const onChange = (e: MediaQueryListEvent) => setDark(e.matches)
+    query.addEventListener('change', onChange)
+    return () => query.removeEventListener('change', onChange)
+  }, [])
+
+  const toggle = () => {
+    setDark(d => {
+      const next = !d
+      localStorage.setItem('theme', next ? 'dark' : 'light')
+      return next
+    })
+  }
+
+  return { dark, toggle }
 }

@@ -47,7 +47,9 @@
   color: var(--color-text);
 }
 
-.title:focus:not(:focus-visible) {
+/* Focused programmatically on mount for screen readers (never reachable
+   via Tab), so it should never show a focus ring. */
+.title:focus {
   outline: none;
 }
 

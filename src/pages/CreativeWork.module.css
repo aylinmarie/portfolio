@@ -1,0 +1,144 @@
+.page {
+  min-height: 100vh;
+  padding: 128px 48px;
+  position: relative;
+}
+
+.themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--color-text-subtle);
+  min-height: 24px;
+}
+
+.themeToggle svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.themeInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.themeTrack {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background: var(--color-text-subtle);
+  border-radius: 11px;
+  transition: background 0.2s;
+}
+
+.themeInput:checked ~ .themeTrack {
+  background: var(--color-accent);
+}
+
+.themeInput:focus-visible ~ .themeTrack {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.themeThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-surface);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.themeInput:checked ~ .themeTrack .themeThumb {
+  transform: translateX(18px);
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-caption);
+  letter-spacing: 0.04em;
+  color: var(--color-text-subtle);
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.kicker:hover {
+  color: var(--color-accent);
+}
+
+.header {
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: var(--font-size-heading-3);
+  font-weight: var(--font-weight-heading-3);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.title:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.subtitle {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-subtle);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.frame {
+  aspect-ratio: 1;
+  border: 1px dashed var(--color-border);
+  border-radius: 4px;
+}
+
+.note {
+  font-size: var(--font-size-caption-sm);
+  color: var(--color-text-subtle);
+  margin-top: 32px;
+}
+
+@media (max-width: 720px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 80px 24px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

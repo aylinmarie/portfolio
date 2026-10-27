@@ -33,7 +33,7 @@ const isDesignsHost = typeof window !== 'undefined' && window.location.hostname.
 
 function AppShell() {
   const { pathname } = useLocation()
-  const isLinksPage = pathname === '/links'
+  const hideNav = pathname === '/links' || pathname === '/designs'
 
   if (isDesignsHost) {
     return (
@@ -51,7 +51,7 @@ function AppShell() {
   return (
     <>
       <ScrollToTop />
-      {!isLinksPage && <Nav />}
+      {!hideNav && <Nav />}
       <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -39,13 +39,13 @@ export default function About() {
           <motion.div variants={fadeUp} className={styles.content}>
             <div className={styles.bio}>
               <p>
-                Dedicated to architecting the bridge between design intent and production code. I specialize in design systems with a deep commitment to accessibility, and I've spent my career helping organizations, from small businesses to enterprise, build better products at scale.
+                Dedicated to architecting the bridge between design and engineering. I specialize in design systems with a deep commitment to accessibility, and I've spent my career helping organizations, from small businesses to enterprise, build better products at scale.
               </p>
               <p>
-                As the landscape of development shifts, I'm now focused on the mechanics of velocity by building the tooling and AI-driven infrastructure that helps engineers ship UI faster without sacrificing quality or inclusive design.
+                As the landscape of development shifts, I'm focused on the mechanics of building the tooling and infrastructure that helps engineers ship UI faster without sacrificing quality or inclusive design.
               </p>
               <p>
-                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only"> (opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. Today, I lead design system engineering at Intuit Mailchimp.
+                I started at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly<span className="sr-only"> (opens in new tab)</span></a>, became an independent developer with Squarepsace, then built apps for a social good creative agency. The last 8 years, I've been steering design system engineering at Intuit Mailchimp and QuickBooks.
               </p>
             </div>
 
